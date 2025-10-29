@@ -53,7 +53,7 @@ A glimpse into the clean, professional, and mission-focused design of the Norwa 
 
 **Homepage Hero Section**
 _The first impression, featuring a powerful video and our core mission._
-![Homepage Screenshot](/Norwa%20Website/assets/screenshots/homepage.png) <!-- Replace with your actual screenshot path -->
+![Homepage Screenshot](/Norwa%20Website/assets/screenshots/homepage.png)
 
 ---
 
@@ -85,7 +85,7 @@ This is a static website built with modern, reliable, and widely-supported techn
 ## 📂 Project Structure
 
 
-The above project is very suit for this Website Please follow it 
+The above project Structure  is very suit for this Website Please follow it 
 
 ## ⚙️ Getting Started
 
