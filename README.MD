@@ -84,31 +84,8 @@ This is a static website built with modern, reliable, and widely-supported techn
 
 ## 📂 Project Structure
 
-The project follows a standard and intuitive file structure, making it easy to navigate and maintain.
 
-/
-|-- assets/
-|   |-- css/
-|   |   |-- main.css         (Main stylesheet)
-|   |   |-- home-styles.css  (Homepage-specific styles)
-|   |-- js/
-|   |   |-- main.js          (Global custom JavaScript, including WhatsApp & form logic)
-|   |-- img/               (All images, logos, and project photos)
-|   |-- vendor/            (Third-party libraries like Bootstrap, Swiper, etc.)
-|
-|-- forms/                   (PHP scripts for form processing - if any)
-|-- screenshots/             (For storing README screenshots)
-|
-|-- index.html               (Homepage)
-|-- about.html
-|-- borehole.html
-|-- contact.html
-|-- water Analysis.html
-|-- ... (all other HTML pages)
-|
-|-- README.md                (This file)
-
----
+The above project is very suit for this Website Please follow it 
 
 ## ⚙️ Getting Started
 
