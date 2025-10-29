@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="/Norwa Website/assets/screenshots/white norwa logo.svg" alt="Norwa Africa Logo" width="400"/>
+  <img src="/Norwa Website/assets/screenshots/white norwa logo.png" alt="Norwa Africa Logo" width="400"/>
 </div>
 
 # Norwa Africa - Water & Energy Solutions Website
