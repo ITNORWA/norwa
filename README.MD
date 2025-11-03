@@ -42,7 +42,7 @@ This website is packed with features designed to inform, engage, and convert vis
   - **Contact & Feedback Forms:** Easy-to-use forms for general inquiries and customer feedback.
 - **📱 Fully Responsive Design:** A seamless experience across all devices, from desktops to mobile phones.
 - **💬 Floating WhatsApp Button:** Instant, direct communication with our support team for immediate assistance.
-- **动态 Hero Section:** An engaging homepage hero with a background video that tells our story.
+- **Hero Section:** An engaging homepage hero with a background video that tells our story.
 - **📰 News & Events Section:** Stay updated with the latest company news, announcements, and community events.
 
 ---
