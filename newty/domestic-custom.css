@@ -1,0 +1,173 @@
+/*
+ * Custom styles for the Domestic Solutions page with sticky sidebar
+ * VERSION 2.1 - Corrected top spacing issue
+ */
+
+/* ===================================================================
+   1. LAYOUT & SPACING
+   =================================================================== */
+
+/*
+   NOTE: The incorrect 'margin-top' on '.domestic-solution-main' has been REMOVED.
+   The space is now handled by the natural padding of the section below the hero.
+*/
+
+/* Main layout for the sidebar and content */
+.solution-content-wrapper {
+    padding: var(--section-padding) 0;
+    background-color: var(--background-color);
+}
+
+.main-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* ===================================================================
+   2. STICKY SIDEBAR NAVIGATION STYLING
+   =================================================================== */
+#sidebar-nav {
+    position: sticky;
+    /* This value determines where the sidebar stops when you scroll down */
+    top: 180px; /* (Approx. 80px header + 30px desired space) */
+    left: 0;
+    width: 280px;
+    flex-shrink: 0;
+    background-color: var(--surface-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.07);
+    border: 1px solid #e9ecef;
+    padding: 25px;
+    z-index: 900;
+}
+
+/* Sidebar Title */
+.sidebar-title {
+    font-family: var(--heading-font);
+    font-size: 1.5rem; /* 24px */
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 0.75rem;
+}
+
+/* Sidebar Divider Line */
+.sidebar-divider {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid #dee2e6;
+}
+
+#sidebar-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar-nav ul li a {
+    display: block;
+    padding: 12px 15px;
+    color: var(--default-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover state for non-active links (light green background) */
+#sidebar-nav ul li a:hover:not(.active) {
+    color: var(--accent-color);
+    background-color: #e6f4ef;
+}
+
+/* Active link style (solid green background) */
+#sidebar-nav ul li a.active {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    font-weight: 600;
+}
+
+/* ===================================================================
+   3. CONTENT DISPLAY AREA
+   =================================================================== */
+.content-display-area {
+    flex-grow: 1;
+}
+
+.content-section {
+    display: none;
+    background-color: var(--surface-color);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.07);
+    border: 1px solid #e9ecef;
+    margin-bottom: 30px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.content-section.active {
+    display: block;
+}
+
+.content-section .tap-water-systems-container,
+.content-section .borehole-systems-container,
+.content-section .accessories-section-container {
+    padding: 0;
+    margin-top: 0;
+    border-top: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.content-section .section-title {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.content-section .section-title h3::after {
+    left: 0;
+    transform: translateX(0);
+}
+
+/* ===================================================================
+   4. RESPONSIVE ADJUSTMENTS
+   =================================================================== */
+@media (max-width: 991px) {
+    .main-layout {
+        flex-direction: column;
+    }
+
+    #sidebar-nav {
+        position: static;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .sidebar-title {
+        text-align: center;
+    }
+
+    #sidebar-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+}
+
+/* ===================================================================
+   5. ANIMATIONS
+   =================================================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
