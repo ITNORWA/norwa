@@ -1,6 +1,5 @@
-# newty
 <div align="center">
-  <img src="/Norwa Website/assets/screenshots/white norwa logo.svg" alt="Norwa Africa Logo" width="400"/>
+  <img src="/Norwa Website/assets/screenshots/white norwa logo.png" alt="Norwa Africa Logo" width="400"/>
 </div>
 
 # Norwa Africa - Water & Energy Solutions Website
@@ -54,7 +53,7 @@ A glimpse into the clean, professional, and mission-focused design of the Norwa 
 
 **Homepage Hero Section**
 _The first impression, featuring a powerful video and our core mission._
-![Homepage Screenshot](/Norwa%20Website/assets/screenshots/homepage.png) <!-- Replace with your actual screenshot path -->
+![Homepage Screenshot](/Norwa%20Website/assets/screenshots/homepage.png)
 
 ---
 
@@ -85,31 +84,8 @@ This is a static website built with modern, reliable, and widely-supported techn
 
 ## 📂 Project Structure
 
-The project follows a standard and intuitive file structure, making it easy to navigate and maintain.
 
-/
-|-- assets/
-|   |-- css/
-|   |   |-- main.css         (Main stylesheet)
-|   |   |-- home-styles.css  (Homepage-specific styles)
-|   |-- js/
-|   |   |-- main.js          (Global custom JavaScript, including WhatsApp & form logic)
-|   |-- img/               (All images, logos, and project photos)
-|   |-- vendor/            (Third-party libraries like Bootstrap, Swiper, etc.)
-|
-|-- forms/                   (PHP scripts for form processing - if any)
-|-- screenshots/             (For storing README screenshots)
-|
-|-- index.html               (Homepage)
-|-- about.html
-|-- borehole.html
-|-- contact.html
-|-- water Analysis.html
-|-- ... (all other HTML pages)
-|
-|-- README.md                (This file)
-
----
+The above project Structure  is very suit for this Website Please follow it 
 
 ## ⚙️ Getting Started
 
