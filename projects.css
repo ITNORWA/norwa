@@ -1,203 +1,3 @@
-/*--------------------------------------------------------------
-# Font & Color Variables
---------------------------------------------------------------*/
-@charset "UTF-8";
-:root {
-  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
-  --heading-font: "Raleway", sans-serif;
-  --nav-font: "Poppins", sans-serif;
-  --background-color: #f1f5f4;
-  --default-color: #212529;
-  --heading-color: #2d465e;
-  --accent-color: #08915e;
-  --surface-color: #ffffff;
-  --contrast-color: #ffffff;
-}
-
-/*--------------------------------------------------------------
-# General Styling
---------------------------------------------------------------*/
-body {
-  background-color: var(--background-color);
-  color: var(--default-color);
-  font-family: var(--default-font);
-}
-
-a {
-  color: var(--accent-color);
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: var(--heading-color);
-  font-family: var(--heading-font);
-}
-
-.section { padding: 60px 0; overflow: clip; }
-
-/*--------------------------------------------------------------
-# Header & Navigation (With Scroll Fix)
---------------------------------------------------------------*/
-.header { background-color: transparent; transition: all 0.5s; z-index: 997; padding: 15px 0; }
-.header.scrolled { background-color: rgba(0, 0, 0, 0.8); box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1); }
-.header .logo img { max-height: 50px; }
-.navmenu { --nav-color: rgba(255, 255, 255, 0.8); --nav-hover-color: #fff; }
-.navmenu ul { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; }
-.navmenu a { color: var(--nav-color); padding: 10px 15px; font-weight: 500; font-size: 16px; }
-.navmenu a:hover, .navmenu .active { color: var(--nav-hover-color); }
-.mobile-nav-toggle { color: var(--nav-color); font-size: 28px; cursor: pointer; }
-
-/*--------------------------------------------------------------
-# Preloader - Water Ripple
---------------------------------------------------------------*/
-#preloader { position: fixed; inset: 0; z-index: 99999; overflow: hidden; background: #ffffff; display: flex; align-items: center; justify-content: center; transition: opacity 0.5s ease-out; }
-.ripple-preloader { position: relative; width: 80px; height: 80px; }
-.ripple-preloader div { position: absolute; border: 4px solid var(--accent-color); opacity: 1; border-radius: 50%; animation: ripple 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite; }
-.ripple-preloader div:nth-child(2) { animation-delay: -0.75s; }
-@keyframes ripple { 0% { top: 36px; left: 36px; width: 0; height: 0; opacity: 1; } 100% { top: 0px; left: 0px; width: 72px; height: 72px; opacity: 0; } }
-
-/*--------------------------------------------------------------
-# Page Title
---------------------------------------------------------------*/
-.page-title { color: #fff; background-size: cover; background-position: center; padding: 140px 0 80px 0; position: relative; text-align: center; }
-.page-title:before { content: ""; background-color: rgba(0, 0, 0, 0.6); position: absolute; inset: 0; }
-.page-title h1 { font-size: 48px; font-weight: 700; color: #fff; }
-.page-title p { font-size: 1.1rem; color: rgba(255,255,255,0.8); }
-.page-title .breadcrumbs ol { display: flex; justify-content: center; padding: 0; margin-top: 10px; list-style: none; }
-.page-title .breadcrumbs li+li { padding-left: 10px; }
-.page-title .breadcrumbs li+li::before { content: "/"; display: inline-block; padding-right: 10px; color: rgba(255, 255, 255, 0.5); }
-
-/*--------------------------------------------------------------
-# Projects Section
---------------------------------------------------------------*/
-.projects .project-filters {
-  padding: 0;
-  margin: 0 auto 35px auto;
-  list-style: none;
-  text-align: center;
-  background: var(--surface-color);
-  border-radius: 50px;
-  padding: 8px 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  display: inline-block;
-}
-
-.projects .project-filters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 10px 18px;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1;
-  color: var(--heading-color);
-  margin: 0 4px;
-  transition: all 0.3s ease-in-out;
-  border-radius: 50px;
-}
-
-.projects .project-filters li:hover,
-.projects .project-filters li.filter-active {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-}
-
-.projects .isotope-container {
-  position: relative;
-  height: 500px; /* Placeholder height, Isotope will manage this */
-}
-
-.projects .isotope-item {
-  margin-bottom: 24px;
-}
-
-.projects .project-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-}
-
-.projects .project-item img {
-  transition: transform 0.6s ease-in-out;
-  width: 100%;
-}
-
-.projects .project-item .project-info {
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 3;
-  transition: all 0.4s ease-in-out;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-}
-
-.projects .project-item .project-info h4 {
-  font-size: 20px;
-  color: #fff;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.projects .project-item .project-info p {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 14px;
-  margin-bottom: 15px;
-}
-
-.projects .project-item .project-info .preview-link,
-.projects .project-item .project-info .details-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 50%;
-  transition: 0.3s;
-  color: #fff;
-  margin-right: 8px;
-}
-
-.projects .project-item .project-info .preview-link:hover,
-.projects .project-item .project-info .details-link:hover {
-  background: var(--accent-color);
-}
-
-.projects .project-item:hover img {
-  transform: scale(1.1);
-}
-
-.projects .project-item:hover .project-info {
-  opacity: 1;
-}
-
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-.footer.dark-background { --background-color: #060606; --default-color: rgba(255, 255, 255, 0.7); --heading-color: #fff; }
-.footer .footer-top { padding-top: 50px; }
-.footer h4 { font-size: 16px; font-weight: bold; position: relative; padding-bottom: 12px; }
-
-/*--------------------------------------------------------------
-# Responsive Styles
---------------------------------------------------------------*/
-@media (max-width: 768px) {
-  .page-title h1 {
-    font-size: 36px;
-  }
-  .projects .project-filters {
-    padding: 8px 0;
-  }
-  .projects .project-filters li {
-    padding: 8px 12px;
-    font-size: 14px;
-  }
-}
-
 /**
 * Template Name: NiceSchool
 * Template URL: https://bootstrapmade.com/nice-school-bootstrap-education-template/
@@ -206,7 +6,7 @@ h1, h2, h3, h4, h5, h6 {
 * License: https://bootstrapmade.com/license/
 */
 
-
+@charset "UTF-8";
 
 /*--------------------------------------------------------------
 # Font & Color Variables
@@ -823,7 +623,7 @@ h6 {
 --------------------------------------------------------------*/
 .page-title {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color:#060606;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -921,4 +721,145 @@ section,
 
 .section-title p {
   margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Preloader - Water Ripple
+--------------------------------------------------------------*/
+#preloader { position: fixed; inset: 0; z-index: 99999; overflow: hidden; background: #ffffff; display: flex; align-items: center; justify-content: center; transition: opacity 0.5s ease-out; }
+.ripple-preloader { position: relative; width: 80px; height: 80px; }
+.ripple-preloader div { position: absolute; border: 4px solid var(--accent-color); opacity: 1; border-radius: 50%; animation: ripple 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite; }
+.ripple-preloader div:nth-child(2) { animation-delay: -0.75s; }
+@keyframes ripple { 0% { top: 36px; left: 36px; width: 0; height: 0; opacity: 1; } 100% { top: 0px; left: 0px; width: 72px; height: 72px; opacity: 0; } }
+
+/*--------------------------------------------------------------
+# Page Title & Project Filters (MODIFIED)
+--------------------------------------------------------------*/
+.page-title {
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  padding: 160px 0 100px 0; /* Increased bottom padding */
+  position: relative;
+  text-align: center;
+}
+.page-title:before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  inset: 0;
+}
+.page-title h1 { font-size: 48px; font-weight: 700; color: #fff; }
+.page-title p { font-size: 1.1rem; color: rgba(255,255,255,0.9); margin-bottom: 20px; }
+.page-title .breadcrumbs ol { display: flex; justify-content: center; padding: 0; margin: 0; list-style: none; }
+.page-title .breadcrumbs li+li { padding-left: 10px; }
+.page-title .breadcrumbs li+li::before { content: "/"; display: inline-block; padding-right: 10px; color: rgba(255, 255, 255, 0.7); }
+.page-title .breadcrumbs .current { color: #fff; font-weight: 600; }
+
+/* Filter buttons inside Page Title */
+.page-title .project-filters {
+  padding: 0;
+  margin: 30px auto 0 auto;
+  list-style: none;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 8px 15px;
+  display: inline-block;
+}
+.page-title .project-filters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+  margin: 0 4px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50px;
+}
+.page-title .project-filters li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.page-title .project-filters li.filter-active {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+}
+
+
+/*--------------------------------------------------------------
+# Projects Section
+--------------------------------------------------------------*/
+.projects {
+    padding-top: 40px; /* Reduced top padding as filters are now in the hero */
+}
+.projects .isotope-item { margin-bottom: 24px; }
+.projects .project-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+.projects .project-item img {
+  transition: transform 0.6s ease-in-out;
+  width: 100%;
+}
+.projects .project-item .project-info {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  transition: all 0.4s ease-in-out;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+}
+.projects .project-item .project-info h4 { font-size: 20px; color: #fff; font-weight: 600; margin-bottom: 5px; }
+.projects .project-item .project-info p { color: rgba(255, 255, 255, 0.8); font-size: 14px; margin-bottom: 15px; }
+.projects .project-item .project-info .preview-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  transition: 0.3s;
+  color: #fff;
+  margin-right: 8px;
+}
+.projects .project-item .project-info .preview-link:hover { background: var(--accent-color); }
+.projects .project-item:hover img { transform: scale(1.1); }
+.projects .project-item:hover .project-info { opacity: 1; }
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer.dark-background { --background-color: #060606; --default-color: rgba(255, 255, 255, 0.7); --heading-color: #fff; }
+.footer .footer-top { padding-top: 50px; }
+.footer h4 { font-size: 16px; font-weight: bold; position: relative; padding-bottom: 12px; }
+
+/*--------------------------------------------------------------
+# Responsive Styles
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+  .page-title { padding: 120px 0 80px 0; }
+  .page-title h1 { font-size: 36px; }
+  .page-title .project-filters { padding: 6px 10px; }
+  .page-title .project-filters li { padding: 8px 12px; font-size: 14px; }
+}
+
+@media (max-width: 576px) {
+    .page-title .project-filters {
+        display: block;
+        border-radius: 10px;
+    }
+    .page-title .project-filters li {
+        display: block;
+        margin-bottom: 5px;
+    }
 }
