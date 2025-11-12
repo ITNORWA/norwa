@@ -145,6 +145,7 @@ h6 {
   }
 }
 
+
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
@@ -155,17 +156,19 @@ h6 {
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 15px 0;
-  transition: all 0.5s;
+  /* transition: all 0.5s; */
   z-index: 997;
 }
 
-.header .logo {
-  line-height: 1;
+
+.header .container-fluid {
+  max-width: 87%;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .header .logo img {
-  max-height: 150px;
-  margin-right: 8px;
+  max-height: 70px; 
 }
 
 .header .logo i {
@@ -181,13 +184,8 @@ h6 {
 }
 
 .scrolled .header {
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
-}
-
-/* Global Header on Scroll
-------------------------------*/
-.scrolled .header {
   --background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 
 /*--------------------------------------------------------------

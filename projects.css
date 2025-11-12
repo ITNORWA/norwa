@@ -1,18 +1,7 @@
-/**
-* Template Name: NiceSchool
-* Template URL: https://bootstrapmade.com/nice-school-bootstrap-education-template/
-* Updated: May 10 2025 with Bootstrap v5.3.6
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 
 @charset "UTF-8";
 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
-/* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",  sans-serif;
@@ -151,17 +140,19 @@ h6 {
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 15px 0;
-  transition: all 0.5s;
+  /* transition: all 0.5s; */
   z-index: 997;
 }
 
-.header .logo {
-  line-height: 1;
+
+.header .container-fluid {
+  max-width: 87%;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .header .logo img {
-  max-height: 150px;
-  margin-right: 8px;
+  max-height: 70px; 
 }
 
 .header .logo i {
@@ -177,14 +168,10 @@ h6 {
 }
 
 .scrolled .header {
+  --background-color: rgba(0, 0, 0, 0.8);
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 
-/* Global Header on Scroll
-------------------------------*/
-.scrolled .header {
-  --background-color: rgba(0, 0, 0, 0.8);
-}
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -862,4 +849,53 @@ section,
         display: block;
         margin-bottom: 5px;
     }
+}
+
+
+@keyframes intense-shake {
+  0%, 25%, 100% { transform: translate(0, 0) rotate(0) scale(1); }
+
+  2%  { transform: translate(-10px, -5px) rotate(-18deg) scale(1.1); }
+  4%  { transform: translate(10px, 5px) rotate(18deg) scale(1.0); }
+  6%  { transform: translate(-8px, -4px) rotate(-15deg) scale(1.1); }
+  8%  { transform: translate(8px, 4px) rotate(15deg) scale(1.0); }
+  10% { transform: translate(-6px, -2px) rotate(-10deg); }
+  12% { transform: translate(6px, 2px) rotate(10deg); }
+  14% { transform: translate(-4px, -1px) rotate(-8deg); }
+  16% { transform: translate(4px, 1px) rotate(8deg); }
+  18% { transform: translate(-2px, 0) rotate(-4deg); }
+  20% { transform: translate(2px, 0) rotate(4deg); }
+  
+  22% { transform: translate(0, 0) rotate(0); }
+}
+
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    z-index: 50;
+    background-color: #25D366;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.65);
+    text-decoration: none;
+    
+    animation: intense-shake 5s infinite;
+    
+    transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.15); 
+    animation-play-state: paused;
+}
+
+.link-cursor {
+    cursor: pointer;
 }
