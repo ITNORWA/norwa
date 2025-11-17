@@ -26,14 +26,12 @@
 
   <!-- Main CSS File -->
   <link href="projects.css" rel="stylesheet">
-
 </head>
 
 <body class="projects-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/white norwa logo.svg" alt="Norwa Africa Ltd Logo" width="160" height="70">
       </a>
@@ -63,7 +61,6 @@
             </ul>
           </li>
           <li><a href="projects.html" class="active">Our References</a></li>
-          <!-- <li><a href="news.html">News & Events</a></li> -->
           <li class="dropdown"><a href="#"><span>Careers</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="journey.html">Candidate Journey</a></li>
@@ -76,13 +73,10 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
     </div>
   </header>
 
   <main class="main">
-
-    <!-- Page Title -->
     <div class="page-title" style="background-image: url(assets/img/projects/project_banner.webp);">
       <div class="container position-relative">
         <h1>Our Impactful Projects</h1>
@@ -93,347 +87,543 @@
             <li class="current">Projects</li>
           </ol>
         </nav>
-        
-        <!-- Filter Buttons Moved Here -->
+
+        <!-- Filter Buttons -->
         <ul class="project-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All Projects</li>
-            <li data-filter=".filter-ro">R.O. Treatment</li>
-            <li data-filter=".filter-community">Community Water</li>
-            <li data-filter=".filter-borehole">Borehole</li>
-            <li data-filter=".filter-mobile">Mobile Solutions</li>
+          <li data-filter="*" class="filter-active">All Projects</li>
+          <li data-filter=".filter-ro">R.O. Treatment</li>
+          <li data-filter=".filter-community">Community Water</li>
+          <li data-filter=".filter-borehole">Borehole</li>
+          <li data-filter=".filter-mobile">Mobile Solutions</li>
+          <li data-filter=".filter-solar">Solar Solutions</li> 
         </ul>
       </div>
-    </div><!-- End Page Title -->
+    </div>
 
     <!-- Projects Section -->
     <section id="projects" class="projects section">
       <div class="container" data-aos="fade-up">
-
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
- <!-- Project Item 1 -->
-            <div class="col-lg-4 col-md-6 isotope-item filter-community">
-              <div class="project-item" style="background-color: #ecf4fe; border-radius: 12px; box-shadow: 0 2px 16px 0 rgba(50,78,133,0.06);">
-                <img src="assets/img/projects/90cubic RO PLANT.jpeg" class="img-fluid" alt="Community Water Kiosk" style="border-radius: 10px 10px 0 0; border-bottom: 1px solid #bed6ef;">
-                <div class="project-info" style="background: #fff; border-radius: 0 0 12px 12px; border-top: none; padding: 18px 18px 15px 18px;">
-                  <h4 style="color: #08915e; font-weight: 700;">Community Water Kiosk</h4>
-                  <p style="color: #08915e; font-size: 15px; font-weight: 500;">20,000 L/day Solarized System</p>
-            
-                  <!-- Lightbox Trigger -->
-                  <a 
-                    href="#kiosk-content1" 
-                    class="glightbox preview-link" 
-                    data-glightbox="type: inline"
-                    title="Community Water Kiosk"
-                    style="color:#08915e; border:1.5px solid #bee3fa; border-radius:30px; padding:7px 13px; display:inline-block; transition:background 0.2s;"
-                    onmouseover="this.style.background='#e4f1fa';" onmouseout="this.style.background='';"
-                  >
-                    <i class="bi bi-arrows-angle-expand" style="font-size: 1.25rem; color:#08915e;"></i>
-                  </a>
 
-<!-- Hidden Side-By-Side Lightbox Content -->
-<div id="kiosk-content1" class="glightbox-content" style="display:none;">
-  <div style="display:flex; gap:20px; align-items:center; max-width:900px;">
-    
-    <!-- Image Side -->
-    <div style="flex:1;">
-      <img 
-        src="assets/img/projects/90cubic RO PLANT.jpeg" 
-        alt="Community Water Kiosk" 
-        style="width:100%; border-radius:10px;">
-    </div>
-
-    <!-- Text Side -->
-    <div style="flex:1; padding:10px;">
-      <h2>Community Water Kiosk</h2>
-      <p style="font-size:16px;">20,000 L/day Solarized System</p>
-      <p>
-        This system provides clean water to the community using solar-powered pumping, 
-        storage, and purification technologies.
-      </p>
-    </div>
-
-  </div>
-</div>
-
-
+            <!-- Project 1 -->
+            <div class="col-lg-4 col-md-6 isotope-item  filter-ro ">
+              <article class="project-item">
+                <a href="#project-1" class="project-link glightbox" data-glightbox="type:inline" data-gallery="projects-gallery">
+                  <div class="project-image-wrapper">
+                    <img src="assets/img/projects/90cubic RO PLANT.webp" alt="Community Water Kiosk – 20,000 L/day Solarized System">
+                    <span class="project-tag">Solar RO</span>
+                  </div>
+                  <div class="project-info">
+                    <h4 class="project-title">System at Yamin's on the Park 🏡</h4>
+                    <p class="project-subtitle">20,000 L/day Solarized R.O. Plant</p>
+                    <p class="project-location"><i class="bi bi-geo-alt"></i> Nairobi, Kenya</p>
+                  </div>
+                </a>
+              </article>
+              <div id="project-1" class="project-modal" style="display:none;">
+                <div class="project-modal-inner">
+                  <div class="project-modal-image">
+                    <img src="assets/img/projects/90cubic RO PLANT.webp" alt="System at Yamin's on the Park 🏡– 20,000 L/day Solarized System">
+                  </div>
+                  <div class="project-modal-body">
+                    <h2>System at Yamin's on the Park 🏡 – 20,000 L/day Solarized R.O.</h2>
+                    <p class="project-modal-meta">
+                      <strong>Segment:</strong> Solarized R.O. + Pre-treatment
+                    </p>
+                    <p>This project delivers safe, affordable drinking water through a solar-powered kiosk model. Raw borehole water is filtered and treated via multi-stage filtration and reverse osmosis, ensuring WHO-compliant quality.</p>
+                    <ul>
+                      <li>Daily capacity: approx. 20,000 L/day</li>
+                      <li>Solar pumping and treatment reduce operating costs</li>
+                      <li>Designed for low maintenance and high uptime</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-            <!-- Project Item 2 -->
-            <div class="col-lg-4 col-md-6 isotope-item filter-community">
-              <div class="project-item" style="background-color: #ecf4fe; border-radius: 12px; box-shadow: 0 2px 16px 0 rgba(50,78,133,0.06);">
-                <img src="assets/img/projects/WATERKIOSK.JPG" class="img-fluid" alt="Community Water Kiosk" style="border-radius: 10px 10px 0 0; border-bottom: 1px solid #bed6ef;">
-                <div class="project-info" style="background: #fff; border-radius: 0 0 12px 12px; border-top: none; padding: 18px 18px 15px 18px;">
-                  <h4 style="color: #08915e; font-weight: 700;">Community Water Kiosk</h4>
-                  <p style="color: #08915e; font-size: 15px; font-weight: 500;">20,000 L/day Solarized System</p>
-            
-                  <!-- Lightbox Trigger -->
-                  <a 
-                    href="#kiosk-content2" 
-                    class="glightbox preview-link" 
-                    data-glightbox="type: inline"
-                    title="Community Water Kiosk"
-                    style="color:#08915e; border:1.5px solid #bee3fa; border-radius:30px; padding:7px 13px; display:inline-block; transition:background 0.2s;"
-                    onmouseover="this.style.background='#e4f1fa';" onmouseout="this.style.background='';"
-                  >
-                    <i class="bi bi-arrows-angle-expand" style="font-size: 1.25rem; color:#08915e;"></i>
-                  </a>
 
-<!-- Hidden Side-By-Side Lightbox Content -->
-<div id="kiosk-content2" class="glightbox-content" style="display:none;">
-  <div style="display:flex; gap:20px; align-items:center; max-width:900px;">
-    
-    <!-- Image Side -->
-    <div style="flex:1;">
-      <img 
-        src="assets/img/projects/WATERKIOSK.JPG" 
-        alt="Community Water Kiosk" 
-        style="width:100%; border-radius:10px;">
-    </div>
+            <!-- Project 2 – Community Water Kiosk -->
+            <div class="col-lg-4 col-md-6 isotope-item filter-community filter-solar ">
+              <article class="project-item">
+                <a href="#project-2" class="project-link glightbox" data-glightbox="type:inline" data-gallery="projects-gallery">
+                  <div class="project-image-wrapper">
+                    <img src="assets/img/projects/WATERKIOSK.webp"
+                         alt="Community Water Kiosk – 20,000 L/day Solarized System">
+                    <span class="project-tag">Community Water</span>
+                  </div>
+                  <div class="project-info">
+                    <h4 class="project-title">Community Water Kiosk</h4>
+                    <p class="project-subtitle">Solarized Water Kiosk with Storage</p>
+                    <p class="project-location"><i class="bi bi-geo-alt"></i> Eastern Kenya</p>
+                  </div>
+                </a>
+              </article>
 
-    <!-- Text Side -->
-    <div style="flex:1; padding:10px;">
-      <h2>Community Water Kiosk</h2>
-      <p style="font-size:16px;">20,000 L/day Solarized System</p>
-      <p>
-        This system provides clean water to the community using solar-powered pumping, 
-        storage, and purification technologies.
-      </p>
-    </div>
-
-  </div>
-</div>
-
-
+              <div id="project-2" class="project-modal" style="display:none;">
+                <div class="project-modal-inner">
+                  <div class="project-modal-image">
+                    <img src="assets/img/projects/WATERKIOSK.webp"
+                         alt="Community Water Kiosk – 20,000 L/day Solarized System">
+                  </div>
+                  <div class="project-modal-body">
+                    <h2>Solarized Community Water Kiosk</h2>
+                    <p class="project-modal-meta">
+                      <strong>Segment:</strong> Community Water · <strong>Model:</strong> Kiosk with Elevated Storage
+                    </p>
+                    <p>
+                      A robust kiosk solution that combines solar pumping, storage tanks and treatment to serve
+                      households via a central water point. Designed for pay-per-use or prepaid card systems.
+                    </p>
+                    <ul>
+                      <li>Centralized safe water access for the village</li>
+                      <li>Expandable layout to add extra taps and kiosks</li>
+                      <li>Flexible business model for NGOs, CBOs or county governments</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-           <!-- project item 3 -->
-            <div class="col-lg-4 col-md-6 isotope-item filter-community">
-              <div class="project-item" style="background-color: #ecf4fe; border-radius: 12px; box-shadow: 0 2px 16px 0 rgba(50,78,133,0.06);">
-                <img src="assets/img/projects/mobiledesalinationplant.jpeg" class="img-fluid" alt="Community Water Kiosk" style="border-radius: 10px 10px 0 0; border-bottom: 1px solid #bed6ef;">
-                <div class="project-info" style="background: #fff; border-radius: 0 0 12px 12px; border-top: none; padding: 18px 18px 15px 18px;">
-                  <h4 style="color: #08915e; font-weight: 700;">Community Water Kiosk</h4>
-                  <p style="color: #08915e; font-size: 15px; font-weight: 500;">20,000 L/day Solarized System</p>
-            
-                  <!-- Lightbox Trigger -->
-                  <a 
-                    href="#kiosk-content3" 
-                    class="glightbox preview-link" 
-                    data-glightbox="type: inline"
-                    title="Community Water Kiosk"
-                    style="color:#08915e; border:1.5px solid #08915e; border-radius:30px; padding:7px 13px; display:inline-block; transition:background 0.2s;"
-                    onmouseover="this.style.background='#e4f1fa';" onmouseout="this.style.background='';"
-                  >
-                    <i class="bi bi-arrows-angle-expand" style="font-size: 1.25rem; color:#08915e;"></i>
-                  </a>
 
-<!-- Hidden Side-By-Side Lightbox Content -->
-<div id="kiosk-content3" class="glightbox-content" style="display:none;">
-  <div style="display:flex; gap:20px; align-items:center; max-width:900px;">
-    
-    <!-- Image Side -->
-    <div style="flex:1;">
-      <img 
-        src="assets/img/projects/mobiledesalinationplant.jpeg" 
-        alt="Community Water Kiosk" 
-        style="width:100%; border-radius:10px;">
-    </div>
+            <!-- Project 3 – Mobile Desalination -->
+            <div class="col-lg-4 col-md-6 isotope-item  filter-mobile ">
+              <article class="project-item">
+                <a href="#project-3" class="project-link glightbox" data-glightbox="type:inline" data-gallery="projects-gallery">
+                  <div class="project-image-wrapper">
+                    <img src="assets/img/projects/mobiledesalinationplant.webp"
+                         alt="Mobile Desalination Plant – Trailer-mounted Reverse Osmosis">
+                    <span class="project-tag">Mobile Solution · Desalination</span>
+                  </div>
+                  <div class="project-info">
+                    <h4 class="project-title">Mobile Desalination Plant</h4>
+                    <p class="project-subtitle">Trailer-Mounted R.O. for Rapid Deployment</p>
+                    <p class="project-location"><i class="bi bi-geo-alt"></i> Military, Kenya</p>
+                  </div>
+                </a>
+              </article>
 
-    <!-- Text Side -->
-    <div style="flex:1; padding:10px;">
-      <h2>Community Water Kiosk</h2>
-      <p style="font-size:16px;">20,000 L/day Solarized System</p>
-      <p>
-        This system provides clean water to the community using solar-powered pumping, 
-        storage, and purification technologies.
-      </p>
-    </div>
+              <div id="project-3" class="project-modal" style="display:none;">
+                <div class="project-modal-inner">
+                  <div class="project-modal-image">
+                    <img src="assets/img/projects/mobiledesalinationplant.webp"
+                         alt="Mobile Desalination Plant – Trailer-mounted Reverse Osmosis">
+                  </div>
+                  <div class="project-modal-body">
+                    <h2>Mobile Desalination – Trailer-Mounted R.O.</h2>
+                    <p class="project-modal-meta">
+                      <strong>Segment:</strong> Emergency Response
+                    </p>
+                    <p>
+                    This mobile reverse osmosis desalination unit represents more than equipment — it represents a mindset focused on practical, effective solutions. Assembled at Norwa Africa, it is designed to provide clean, safe water in remote, off-grid, or emergency areas where traditional systems fail.
 
-  </div>
-</div>
-
-
+Engineered and built in Kenya, the unit is tough, reliable, and ready for immediate deployment. Our goal is to create resilient, scalable water solutions that NGOs, CSR programs, and public sector projects can use wherever access to clean water is critical. We build for real-world challenges, not perfect conditions.
+                    </p>
+                    <ul>
+                      <li>Mounted on a road-legal trailer for mobility</li>
+                      <li>Integrated pre-treatment and high-recovery R.O.</li>
+                      <li>Optional hybrid solar-Electric configuration</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-            <!-- End Project Item -->
 
+            <!-- Project 4 – Fluoride Treatment -->
+            <div class="col-lg-4 col-md-6 isotope-item  filter-borehole">
+              <article class="project-item">
+                <a href="#project-4" class="project-link glightbox" data-glightbox="type:inline" data-gallery="projects-gallery">
+                  <div class="project-image-wrapper">
+                    <img src="assets/img/projects/flouridetreatmentplant.webp"
+                         alt="Fluoride Treatment Plant for Borehole Water">
+                    <span class="project-tag">Borehole · Fluoride Treatment</span>
+                  </div>
+                  <div class="project-info">
+                    <h4 class="project-title">Fluoride Treatment Plant</h4>
+                    <p class="project-subtitle">Defluoridation for Rural Community Borehole</p>
+                    <p class="project-location"><i class="bi bi-geo-alt"></i> Rift Valley, Kenya</p>
+                  </div>
+                </a>
+              </article>
 
-            <!-- Project Item 4 -->
-          
-            
-
-            <!-- Project Item 5 -->
-            
-            <div class="col-lg-4 col-md-6 isotope-item filter-community">
-              <div class="project-item" style="background-color: #ecf4fe; border-radius: 12px; box-shadow: 0 2px 16px 0 rgba(50,78,133,0.06);">
-                <img src="assets/img/projects/20211117115631_IMG_1111.webp" class="img-fluid" alt="Community Water Kiosk" style="border-radius: 10px 10px 0 0; border-bottom: 1px solid #bed6ef;">
-                <div class="project-info" style="background: #fff; border-radius: 0 0 12px 12px; border-top: none; padding: 18px 18px 15px 18px;">
-                  <h4 style="color: #08915e; font-weight: 700;">Community Water Kiosk</h4>
-                  <p style="color: #08915e; font-size: 15px; font-weight: 500;">20,000 L/day Solarized System</p>
-            
-                  <!-- Lightbox Trigger -->
-                  <a 
-                    href="#kiosk-content5" 
-                    class="glightbox preview-link" 
-                    data-glightbox="type: inline"
-                    title="Community Water Kiosk"
-                    style="color:#1776d1; border:1.5px solid #bee3fa; border-radius:30px; padding:7px 13px; display:inline-block; transition:background 0.2s;"
-                    onmouseover="this.style.background='#e4f1fa';" onmouseout="this.style.background='';"
-                  >
-                    <i class="bi bi-arrows-angle-expand" style="font-size: 1.25rem; color:#174ea6;"></i>
-                  </a>
-
-<!-- Hidden Side-By-Side Lightbox Content -->
-<div id="kiosk-content5" class="glightbox-content" style="display:none;">
-  <div style="display:flex; gap:20px; align-items:center; max-width:900px;">
-    
-    <!-- Image Side -->
-    <div style="flex:1;">
-      <img 
-        src="assets/img/projects/20211117115631_IMG_1111.webp" 
-        alt="Community Water Kiosk" 
-        style="width:100%; border-radius:10px;">
-    </div>
-
-    <!-- Text Side -->
-    <div style="flex:1; padding:10px;">
-      <h2>Community Water Kiosk</h2>
-      <p style="font-size:16px;">20,000 L/day Solarized System</p>
-      <p>
-        This system provides clean water to the community using solar-powered pumping, 
-        storage, and purification technologies.
-      </p>
-    </div>
-
-  </div>
-</div>
-
-
+              <div id="project-4" class="project-modal" style="display:none;">
+                <div class="project-modal-inner">
+                  <div class="project-modal-image">
+                    <img src="assets/img/projects/flouridetreatmentplant.webp"
+                         alt="Fluoride Treatment Plant for Borehole Water">
+                  </div>
+                  <div class="project-modal-body">
+                    <h2>Fluoride Treatment – Borehole Defluoridation</h2>
+                    <p class="project-modal-meta">
+                      <strong>Segment:</strong> Community Water · <strong>Challenge:</strong> High Fluoride Levels
+                    </p>
+                    <p>
+                      This plant removes excess fluoride from groundwater to below WHO limits, protecting
+                      the community from long-term health effects such as dental and skeletal fluorosis.
+                    </p>
+                    <ul>
+                      <li>Optimized adsorbent/ion exchange media for local water chemistry</li>
+                      <li>Simple operations with clear backwash procedures</li>
+                      <li>Supports central kiosk or piped distribution</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-            
-            <!-- Project Item 6 -->
-            
-            <div class="col-lg-4 col-md-6 isotope-item filter-community">
-              <div class="project-item" style="background-color: #ecf4fe; border-radius: 12px; box-shadow: 0 2px 16px 0 rgba(50,78,133,0.06);">
-                <img src="assets/img/projects/flouridetreatmentplant.JPG" class="img-fluid" alt="Community Water Kiosk" style="border-radius: 10px 10px 0 0; border-bottom: 1px solid #bed6ef;">
-                <div class="project-info" style="background: #fff; border-radius: 0 0 12px 12px; border-top: none; padding: 18px 18px 15px 18px;">
-                  <h4 style="color: #08915e; font-weight: 700;">Community Water Kiosk</h4>
-                  <p style="color: #08915e; font-size: 15px; font-weight: 500;">20,000 L/day Solarized System</p>
-            
-                  <!-- Lightbox Trigger -->
-                  <a 
-                    href="#kiosk-content6" 
-                    class="glightbox preview-link" 
-                    data-glightbox="type: inline"
-                    title="Community Water Kiosk"
-                    style="color:#08915e; border:1.5px solid #08915e; border-radius:30px; padding:7px 13px; display:inline-block; transition:background 0.2s;"
-                    onmouseover="this.style.background='#e4f1fa';" onmouseout="this.style.background='';"
-                  >
-                    <i class="bi bi-arrows-angle-expand" style="font-size: 1.25rem; color:#08915e;"></i>
-                  </a>
 
-<!-- Hidden Side-By-Side Lightbox Content -->
-<div id="kiosk-content6" class="glightbox-content" style="display:none;">
-  <div style="display:flex; gap:20px; align-items:center; max-width:900px;">
-    
-    <!-- Image Side -->
-    <div style="flex:1;">
-      <img 
-        src="assets/img/projects/flouridetreatmentplant.JPG" 
-        alt="Community Water Kiosk" 
-        style="width:100%; border-radius:10px;">
-    </div>
+            <!-- Project 5 – Community Water Kiosk (Elevated Tank) -->
+            <div class="col-lg-4 col-md-6 isotope-item filter-community filter-solar ">
+              <article class="project-item">
+                <a href="#project-5" class="project-link glightbox" data-glightbox="type:inline" data-gallery="projects-gallery">
+                  <div class="project-image-wrapper">
+                    <img src="assets/img/projects/solar projects/IMG_7065.webp"
+                         alt="Community Water Kiosk with Elevated Tank">
+                    <span class="project-tag">Community Water</span>
+                  </div>
+                  <div class="project-info">
+                    <h4 class="project-title">Elevated Tank & Kiosk</h4>
+                    <p class="project-subtitle">Central Distribution Point for Safe Water</p>
+                    <p class="project-location"><i class="bi bi-geo-alt"></i> Arid & Semi-Arid Region</p>
+                  </div>
+                </a>
+              </article>
 
-    <!-- Text Side -->
-    <div style="flex:1; padding:10px;">
-      <h2>Community Water Kiosk</h2>
-      <p style="font-size:16px;">20,000 L/day Solarized System</p>
-      <p>
-        This system provides clean water to the community using solar-powered pumping, 
-        storage, and purification technologies.
-      </p>
-    </div>
-
-  </div>
-</div>
-
-
+              <div id="project-5" class="project-modal" style="display:none;">
+                <div class="project-modal-inner">
+                  <div class="project-modal-image">
+                    <img src="assets/img/projects/solar projects/IMG_7065.webp"
+                         alt="Community Water Kiosk with Elevated Tank">
+                  </div>
+                  <div class="project-modal-body">
+                    <h2>Elevated Tank & Community Kiosk</h2>
+                    <p class="project-modal-meta">
+                      <strong>Segment:</strong> Community Water · <strong>Focus:</strong> Storage & Pressure
+                    </p>
+                    <p>
+                      Elevated storage tank ensure stable pressure and reliable distribution, even during peak demand.
+                      This project supports multiple taps and future expansion into household connections.
+                    </p>
+                    <ul>
+                      <li>Engineered steel tower and tank design</li>
+                      <li>Flexible integration with new or existing treatment plants</li>
+                      <li>Safe access and maintenance walkways</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-             <!-- Project Item 4 -->
-          
-             <div class="col-lg-4 col-md-6 isotope-item filter-community">
-              <div class="project-item" style="background-color: #ecf4fe; border-radius: 12px; box-shadow: 0 2px 16px 0 rgba(50,78,133,0.06);">
-                <img src="assets/img/projects/PXL_20231121_120818765.webp" class="img-fluid" alt="Community Water Kiosk" style="border-radius: 10px 10px 0 0; border-bottom: 1px solid #bed6ef;">
-                <div class="project-info" style="background: #fff; border-radius: 0 0 12px 12px; border-top: none; padding: 18px 18px 15px 18px;">
-                  <h4 style="color: #08915e; font-weight: 700;">Community Water Kiosk</h4>
-                  <p style="color: #08915e; font-size: 15px; font-weight: 500;">20,000 L/day Solarized System</p>
-            
-                  <!-- Lightbox Trigger -->
-                  <a 
-                    href="#kiosk-content4" 
-                    class="glightbox preview-link" 
-                    data-glightbox="type: inline"
-                    title="Community Water Kiosk"
-                    style="color:#08915e; border:1.5px solid #bee3fa; border-radius:30px; padding:7px 13px; display:inline-block; transition:background 0.2s;"
-                    onmouseover="this.style.background='#e4f1fa';" onmouseout="this.style.background='';"
-                  >
-                    <i class="bi bi-arrows-angle-expand" style="font-size: 1.25rem; color:#08915e;"></i>
-                  </a>
 
-<!-- Hidden Side-By-Side Lightbox Content -->
-<div id="kiosk-content4" class="glightbox-content" style="display:none;">
-  <div style="display: flex; gap:20px; align-items:center; max-width:900px;">
-    
-    <!-- Image Side -->
-    <div style="flex:1;">
-      <img 
-        src="assets/img/projects/6cubicROassembly.webp" 
-        alt="Community Water Kiosk" 
-        style="width:100%; border-radius:10px;">
-    </div>
+            <!-- Project 6 – 6 m³/h RO Assembly -->
+            <div class="col-lg-4 col-md-6 isotope-item filter-ro">
+              <article class="project-item">
+                <a href="#project-6" class="project-link glightbox" data-glightbox="type:inline" data-gallery="projects-gallery">
+                  <div class="project-image-wrapper">
+                    <img src="assets/img/projects/PXL_20231121_120818765.webp"
+                         alt="6 m³/h RO Skid Assembly">
+                    <span class="project-tag">Industrial R.O. Skid</span>
+                  </div>
+                  <div class="project-info">
+                    <h4 class="project-title">6 m³/h RO Skid Assembly</h4>
+                    <p class="project-subtitle">Factory-Assembled Skid with FAT</p>
+                    <p class="project-location"><i class="bi bi-geo-alt"></i> Industrial Client, Kenya</p>
+                  </div>
+                </a>
+              </article>
 
-    <!-- Text Side -->
-    <div style="flex:1; padding:10px;">
-      <h2>Community Water Kiosk</h2>
-      <p style="font-size:16px;">20,000 L/day Solarized System</p>
-      <p>
-        This system provides clean water to the community using solar-powered pumping, 
-        storage, and purification technologies.
-      </p>
-    </div>
-
-  </div>
-</div>
-
-
+              <div id="project-6" class="project-modal" style="display:none;">
+                <div class="project-modal-inner">
+                  <div class="project-modal-image">
+                    <img src="assets/img/projects/PXL_20231121_120818765.webp"
+                         alt="6 m³/h RO Skid Assembly">
+                  </div>
+                  <div class="project-modal-body">
+                    <h2>6 m³/h RO Skid – Assembly & FAT</h2>
+                    <p class="project-modal-meta">
+                      <strong>Segment:</strong> Industrial & Commercial R.O.
+                    </p>
+                    <p>
+                      A compact skid-mounted reverse osmosis system assembled, wired and fully tested at Norwa’s
+                      workshop before delivery to site, minimizing installation time.
+                    </p>
+                    <ul>
+                      <li>Integrated pre-treatment, HPP, instrumentation and control</li>
+                      <li>Factory Acceptance Testing (FAT) prior to dispatch</li>
+                      <li>Designed for plug-and-play on site</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-            
 
+
+            <!-- Project 7 – Solar Borehole Pumping -->
+            <div class="col-lg-4 col-md-6 isotope-item filter-borehole ">
+              <article class="project-item">
+                <a href="#project-7" class="project-link glightbox" data-glightbox="type:inline" data-gallery="projects-gallery">
+                  <div class="project-image-wrapper">
+                    <img src="assets/img/projects/solar projects/WhatsApp Image 2021-05-28 at 14.36.42.webp"
+                         alt="Solar Borehole Pumping System ">
+                    <span class="project-tag">Solar Borehole</span>
+                  </div>
+                  <div class="project-info">
+                    <h4 class="project-title">Solar Borehole Pumping System</h4>
+                    <p class="project-subtitle">Off-Grid Water Supply for a Rural Center</p>
+                    <p class="project-location"><i class="bi bi-geo-alt"></i> At President Uhuru Kenyatta Home </p>
+                  </div>
+                </a>
+              </article>
+
+              <div id="project-7" class="project-modal" style="display:none;">
+                <div class="project-modal-inner">
+                  <div class="project-modal-image">
+                    <img src="assets/img/projects/solar projects/WhatsApp Image 2021-05-28 at 14.36.42.webp"
+                         alt="Solar Borehole Pumping System ">
+                  </div>
+                  <div class="project-modal-body">
+                    <h2>Solar Borehole Pumping /h2>
+                    <p class="project-modal-meta">
+                      <strong>Segment:</strong> Borehole · <strong>Energy:</strong> 100% Solar
+                    </p>
+                    <p>
+                      A typical Norwa solar borehole solution designed to lift groundwater to elevated tanks
+                      using solar submersible pumps, eliminating Electric costs and reducing downtime.
+                    </p>
+                    <ul>
+                      <li>Optimized PV array sizing and pump selection</li>
+                      <li>Integrated protections for dry run and low voltage</li>
+                      <li>Designed for schools, dispensaries and villages</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 8 – Hybrid Solar RO for School -->
+            <div class="col-lg-4 col-md-6 isotope-item ">
+              <article class="project-item">
+                <a href="#project-8" class="project-link glightbox" data-glightbox="type:inline" data-gallery="projects-gallery">
+                  <div class="project-image-wrapper">
+                    <img src="assets/img/projects/solar projects/Screenshot 2025-11-15 162528.png"
+                         alt="Hybrid Solar RO System for School ">
+                    <span class="project-tag">Solar + R.O. · School</span>
+                  </div>
+                  <div class="project-info">
+                    <h4 class="project-title">Hybrid Solar RO for School</h4>
+                    <p class="project-subtitle">Safe Drinking Water for Students & Staff</p>
+                    <p class="project-location"><i class="bi bi-geo-alt"></i> Kenya</p>
+                  </div>
+                </a>
+              </article>
+
+              <div id="project-8" class="project-modal" style="display:none;">
+                <div class="project-modal-inner">
+                  <div class="project-modal-image">
+                    <img src="assets/img/projects/solar projects/Screenshot 2025-11-15 162528.png"
+                         alt="Hybrid Solar RO System for School ">
+                  </div>
+                  <div class="project-modal-body">
+                    <h2>Hybrid Solar R.O. – School Application</h2>
+                    <p class="project-modal-meta">
+                      <strong>Segment:</strong> Institutional · <strong>Users:</strong> 500–1,500 Students
+                    </p>
+                    <p>
+                      A model solution where solar energy powers a compact RO unit supplying clean drinking water
+                      to a school, with hybrid backup from the grid or generator.
+                    </p>
+                    <ul>
+                      <li>Automatic tank level control and pump start/stop</li>
+                      <li>Inline monitoring for TDS and flow</li>
+                      <li>Configurable for boarding schools and campuses</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 9 – Solar Mini-Grids for Water Kiosks -->
+            <div class="col-lg-4 col-md-6 isotope-item  filter-community">
+              <article class="project-item">
+                <a href="#project-9" class="project-link glightbox" data-glightbox="type:inline" data-gallery="projects-gallery">
+                  <div class="project-image-wrapper">
+                    <img src="assets/img/projects/solar projects/WhatsApp Image 2021-04-15 at 08.54.07.webp"
+                         alt="Solar Mini-Grid for Multiple Kiosks ">
+                    <span class="project-tag">Solar/UPS sun wave inverter</span>
+                  </div>
+                  <div class="project-info">
+                    <h4 class="project-title">UPS sun wave inverter for Water Kiosks</h4>
+                    <p class="project-subtitle">Shared Power for Clustered Kiosks</p>
+                    <p class="project-location"><i class="bi bi-geo-alt"></i>Eastern Kenya</p>
+                  </div>
+                </a>
+              </article>
+
+              <div id="project-9" class="project-modal" style="display:none;">
+                <div class="project-modal-inner">
+                  <div class="project-modal-image">
+                    <img src="assets/img/projects/solar projects/WhatsApp Image 2021-04-15 at 08.54.07.webp"
+                         alt="Solar Mini-Grid for Multiple Kiosks ">
+                  </div>
+                  <div class="project-modal-body">
+                    <h2>Solar/UPS sun wave inverter</h2>
+                    <p class="project-modal-meta">
+                      <strong>Segment:</strong> Community Clusters · <strong>Approach:</strong> Centralized PV Plant
+                    </p>
+                    <p>
+                      A conceptual Norwa solution where a central solar plant powers several water kiosks,
+                      reducing CAPEX per kiosk and simplifying maintenance.
+                    </p>
+                    <ul>
+                      <li>Centralized PV with distributed water points</li>
+                      <li>Smart metering to track energy and water usage</li>
+                      <li>Ideal for NGOs and county-wide water programs</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 10 – Solarization of Existing Borehole -->
+            <div class="col-lg-4 col-md-6 isotope-item filter-borehole">
+              <article class="project-item">
+                <a href="#project-10" class="project-link glightbox" data-glightbox="type:inline" data-gallery="projects-gallery">
+                  <div class="project-image-wrapper">
+                    <img src="assets/img/projects/solar projects/WhatsApp Image 2021-05-08 at 13.24.36.webp"
+                         alt="Solar Retrofit of Existing Borehole System ">
+                    <span class="project-tag">Solar Retrofit</span>
+                  </div>
+                  <div class="project-info">
+                    <h4 class="project-title">Solarization of Existing Borehole</h4>
+                    <p class="project-subtitle">Electric-to-Solar Upgrade Concept</p>
+                    <p class="project-location"><i class="bi bi-geo-alt"></i> Kenya</p>
+                  </div>
+                </a>
+              </article>
+
+              <div id="project-10" class="project-modal" style="display:none;">
+                <div class="project-modal-inner">
+                  <div class="project-modal-image">
+                    <img src="assets/img/projects/solar projects/WhatsApp Image 2021-05-08 at 13.24.36.webp"
+                         alt="Solar Retrofit of Existing Borehole System ">
+                  </div>
+                  <div class="project-modal-body">
+                    <h2>Solarization – Upgrading Existing Borehole Systems</h2>
+                    <p class="project-modal-meta">
+                      <strong>Segment:</strong> Borehole Retrofit · <strong>Goal:</strong> Reduce Electric Costs
+                    </p>
+                    <p>
+                      Many clients start with Electric-powered boreholes. This concept project showcases how Norwa
+                      can retrofit such systems with solar to cut Electric costs and emissions.
+                    </p>
+                    <ul>
+                      <li>Hybrid controller for seamless changeover</li>
+                      <li>PV array sized to match existing pump duty</li>
+                      <li>Fast payback period where Electric bills are high</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 11 – Solar-Powered Containerized RO -->
+            <div class="col-lg-4 col-md-6 isotope-item  filter-solar ">
+              <article class="project-item">
+                <a href="#project-11" class="project-link glightbox" data-glightbox="type:inline" data-gallery="projects-gallery">
+                  <div class="project-image-wrapper">
+                    <img src="assets/img/projects/solar projects/IMG_7140.webp"
+                         alt="Solar-Powered Containerized RO Plant ">
+                    <span class="project-tag">Containerized Solar RO</span>
+                  </div>
+                  <div class="project-info">
+                    <h4 class="project-title">Solar-Powered Containerized RO</h4>
+                    <p class="project-subtitle">Plug-and-Play Desalination Unit</p>
+                    <p class="project-location"><i class="bi bi-geo-alt"></i> Coastal Africa</p>
+                  </div>
+                </a>
+              </article>
+
+              <div id="project-11" class="project-modal" style="display:none;">
+                <div class="project-modal-inner">
+                  <div class="project-modal-image">
+                    <img src="assets/img/projects/solar projects/IMG_7140.webp"
+                         alt="Solar-Powered Containerized RO Plant ">
+                  </div>
+                  <div class="project-modal-body">
+                    <h2>Solar-Powered Containerized R.O. Plant</h2>
+                    <p class="project-modal-meta">
+                      <strong>Segment:</strong> Mobile/Temporary Installations · <strong>Feed:</strong> Borehole / Brackish / Seawater
+                    </p>
+                    <p>
+                      A containerized RO system powered by a dedicated solar plant, designed for quick deployment
+                      to remote coastal or off-grid locations where grid power is unreliable.
+                    </p>
+                    <ul>
+                      <li>Fully integrated treatment line inside 20 ft or 40 ft container</li>
+                      <li>Remote monitoring-ready controls</li>
+                      <li>Ideal for humanitarian and private sector clients</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+   <!-- Project 4 – Fluoride Treatment -->
+            <div class="col-lg-4 col-md-6 isotope-item ">
+              <article class="project-item">
+                <a href="#project-12" class="project-link glightbox" data-glightbox="type:inline" data-gallery="projects-gallery">
+                  <div class="project-image-wrapper">
+                    <img src="assets/img/projects/flouridetreatmentplant.webp"
+                         alt="Fluoride Treatment Plant for Borehole Water">
+                    <span class="project-tag">Borehole · Fluoride Treatment</span>
+                  </div>
+                  <div class="project-info">
+                    <h4 class="project-title">Fluoride Treatment Plant</h4>
+                    <p class="project-subtitle">Defluoridation for Rural Community Borehole</p>
+                    <p class="project-location"><i class="bi bi-geo-alt"></i> Rift Valley, Kenya</p>
+                  </div>
+                </a>
+              </article>
+
+              <div id="project-12" class="project-modal" style="display:none;">
+                <div class="project-modal-inner">
+                  <div class="project-modal-image">
+                    <img src="assets/img/projects/flouridetreatmentplant.webp"
+                         alt="Fluoride Treatment Plant for Borehole Water">
+                  </div>
+                  <div class="project-modal-body">
+                    <h2>Fluoride Treatment – Borehole Defluoridation</h2>
+                    <p class="project-modal-meta">
+                      <strong>Segment:</strong> Community Water · <strong>Challenge:</strong> High Fluoride Levels
+                    </p>
+                    <p>
+                  For almost a year, residents of Olmoran in Laikipia County have struggled due to a non-operational borehole that left them with limited access to water. Our team conducted a full assessment, including pump testing, to identify the cause and guide a sustainable, long-term solution.
+
+During the testing, many residents gathered to fetch water, showing how urgent the situation is. This project is part of our mission to deliver reliable, data-driven water solutions to underserved communities.
+
+We are committed to turning this challenge into a success story for Olmoran. More updates are coming soon.
+                    </p>
+                    <ul>
+                      <li>Optimized adsorbent/ion exchange media for local water chemistry</li>
+                      <li>Simple operations with clear backwash procedures</li>
+                      <li>Supports central kiosk or piped distribution</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div><!-- End Projects Container -->
         </div>
 
       </div>
-    </section><!-- End Projects Section -->
+    </section>
+    <!-- End Projects Section -->
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (unchanged) -->
   <footer id="footer" class="footer position-relative dark-background">
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center"
-            ><span class="sitename">Norwa Africa</span></a
-          >
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Norwa Africa</span>
+          </a>
           <div class="footer-contact pt-3">
             <p>Baricho Road, Nairobi Kenya</p>
             <p>P.O BOX 19067-00500</p>
@@ -446,23 +636,10 @@
             <p><strong>Email:</strong> <span>info@norwaafrica.com</span></p>
           </div>
           <div class="social-links d-flex mt-4" aria-label="Social links">
-            <a
-              href="https://www.youtube.com/@NorwaafricaLtd_"
-              aria-label="YouTube"
-              ><i class="bi bi-youtube"></i></a
-            ><a
-              href="https://www.facebook.com/Norwaafrica"
-              aria-label="Facebook"
-              ><i class="bi bi-facebook"></i></a
-            ><a
-              href="https://www.instagram.com/norwaafricaltd/"
-              aria-label="Instagram"
-              ><i class="bi bi-instagram"></i></a
-            ><a
-              href="https://www.linkedin.com/company/75512792/"
-              aria-label="LinkedIn"
-              ><i class="bi bi-linkedin"></i
-            ></a>
+            <a href="https://www.youtube.com/@NorwaafricaLtd_" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.facebook.com/Norwaafrica" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/norwaafricaltd/" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/75512792/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
         <div class="col-lg-2 col-md-3 footer-links">
@@ -515,27 +692,16 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
   <!-- WhatsApp button -->
-  <div
-    id="whatsapp-button"
-    class="whatsapp-button"
-    aria-label="Contact via WhatsApp"
-    role="button"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
-      fill="currentColor"
-      class="bi bi-whatsapp"
-      viewBox="0 0 16 16"
-      aria-hidden="true"
-    >
+  <div id="whatsapp-button" class="whatsapp-button" aria-label="Contact via WhatsApp" role="button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+         class="bi bi-whatsapp" viewBox="0 0 16 16" aria-hidden="true">
       <path
-        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
-      />
+        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
     </svg>
   </div>
 
