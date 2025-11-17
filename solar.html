@@ -98,6 +98,60 @@
       </div>
     </div>
   <section class="products-section py-5 bg-light">
+    <style>
+      /* Solar product card hover & animation */
+      .product-card {
+        transition: transform 0.24s cubic-bezier(.22,1,.36,1), box-shadow 0.22s cubic-bezier(.22,1,.36,1);
+        background: #fff;
+        border-radius: 1rem;
+        overflow: hidden;
+        position: relative;
+        will-change: transform, box-shadow;
+      }
+      .product-card:hover,
+      .product-card:focus-within {
+        transform: translateY(-10px) scale(1.025);
+        box-shadow: 0 8px 32px rgba(32,113,88,0.14), 0 2px 8px rgba(0,0,0,.04);
+        z-index: 2;
+      }
+      .product-card .card-img-top {
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        width: 100%;
+        min-height: 210px;
+        background: #eafbee;
+        transition: filter 0.36s cubic-bezier(.22,1,.36,1);
+        filter: brightness(0.97) saturate(1.08);
+      }
+      .product-card:hover .card-img-top {
+        filter: brightness(1.04) saturate(1.20) drop-shadow(0 2px 8px rgba(32,113,88,.08));
+      }
+      .product-card .btn-success {
+        transition: background 0.17s, box-shadow 0.2s, color 0.2s;
+        box-shadow: 0 2px 8px rgba(32, 113, 88, 0.07);
+      }
+      .product-card .btn-success:hover, .product-card .btn-success:focus {
+        background: #146b3a;
+        color: #fff;
+        box-shadow: 0 4px 16px rgba(32, 113, 88, 0.13);
+      }
+      .product-card .bi-check-circle {
+        vertical-align: -0.17em;
+      }
+      /* Optimize images: Responsive & Lazy load */
+      .product-card .card-img-top {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      @media (hover: none) {
+        .product-card:hover,
+        .product-card:focus-within {
+          transform: none;
+          box-shadow: 0 4px 16px rgba(32,113,88,0.07);
+        }
+      }
+    </style>
     <div class="container">
       <div class="section-title text-center mb-5">
         <h2 class="fw-bold">Solar Solutions Products</h2>
@@ -106,8 +160,8 @@
       <div class="row g-4">
         <!-- Card 1: Solar Water Pumping System -->
         <div class="col-md-6 col-lg-4">
-          <div class="card product-card h-100 shadow-sm border-0">
-            <img src="assets/img/norwa/solar_waterpump.jpg" class="card-img-top" alt="Solar Water Pumping System">
+          <div class="card product-card h-100 shadow-sm border-0" tabindex="0">
+            <img src="assets/img/norwa/solar_waterpump.jpg" class="card-img-top" alt="Solar Water Pumping System" width="420" height="320" loading="lazy" decoding="async">
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">Solar Water Pumping Systems</h5>
               <p class="card-text mb-3 text-muted small">
@@ -124,8 +178,8 @@
         </div>
         <!-- Card 2: Solar Panels -->
         <div class="col-md-6 col-lg-4">
-          <div class="card product-card h-100 shadow-sm border-0">
-            <img src="assets/img/norwa/solar_panel.jpg" class="card-img-top" alt="Solar Panels">
+          <div class="card product-card h-100 shadow-sm border-0" tabindex="0">
+            <img src="assets/img/norwa/solar_panel.jpg" class="card-img-top" alt="Solar Panels" width="420" height="320" loading="lazy" decoding="async">
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">Solar Panels</h5>
               <p class="card-text mb-3 text-muted small">
@@ -140,10 +194,10 @@
             </div>
           </div>
         </div>
-        <!-- Card 3: Solar Inverters -->
+        <!-- Card 3: Solar Structures -->
         <div class="col-md-6 col-lg-4">
-          <div class="card product-card h-100 shadow-sm border-0">
-            <img src="assets/img/norwa/solar_inverter.jpg" class="card-img-top" alt="Solar Inverters">
+          <div class="card product-card h-100 shadow-sm border-0" tabindex="0">
+            <img src="assets/img/norwa/solar_inverter.jpg" class="card-img-top" alt="Solar Structures" width="420" height="320" loading="lazy" decoding="async">
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">Solar Structures</h5>
               <p class="card-text mb-3 text-muted small">
