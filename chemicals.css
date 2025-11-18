@@ -309,4 +309,224 @@ h1, h2, h3, h4, h5, h6 {
 
 .link-cursor {
     cursor: pointer;
+}/* Green Theme */
+:root {
+  --green: #1a8f3a;
+  --green-dark: #116829;
+  --light-gray: #f7f7f7;
+}
+
+/* Page Body */
+.chem-body-section {
+  padding: 50px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Side Filter */
+.side-filter {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+  background: var(--light-gray);
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.side-filter li {
+  padding: 12px 15px;
+  margin-bottom: 6px;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+.side-filter li:hover {
+  background: var(--green);
+  color: white;
+}
+
+.side-filter li.active {
+  background: var(--green-dark);
+  color: white;
+}
+
+/* Cards */
+.chem-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e2e2e2;
+  transition: 0.3s;
+  height: 100%;
+}
+
+.chem-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--green);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.chem-img {
+  width: 100%;
+  height: 140px;
+  background: #dcdcdc;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.chem-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+
+.chem-card p {
+  font-size: 14px;
+  color: #333;
+}
+.chem-img {
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chem-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes the image fully cover the container */
+}
+
+.side-filter li { position: relative; }
+.side-filter li .dropdown-menu {
+  display: none;
+  position: absolute;
+  /* Position the dropdown to the right side of the side menu */
+  top: 0;
+  left: calc(100% + 8px);
+  background: #fff;
+  border-radius: 6px;
+  padding: 0;
+  list-style: none;
+  min-width: 200px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  z-index: 120;
+}
+.side-filter li .dropdown-menu li {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+}
+.side-filter li .dropdown-menu li:hover {
+  background: var(--green);
+  color: #fff;
+}
+
+/* If you want the dropdown to open below instead of to the right,
+   add the class `open-below` to the parent `li` and it will fall back */
+.side-filter li.open-below .dropdown-menu {
+  top: 100%;
+  left: 0;
+}
+
+/* Responsive: on smaller screens position the dropdown inline */
+@media (max-width: 991px) {
+  .side-filter li .dropdown-menu {
+    position: static;
+    left: auto;
+    top: auto;
+    box-shadow: none;
+    min-width: auto;
+    border-radius: 6px;
+    margin-top: 8px;
+    display: none;
+  }
+  .side-filter li.dropdown:hover .dropdown-menu,
+  .side-filter li.dropdown.open .dropdown-menu {
+    display: block;
+  }
+}
+
+/* Show dropdown on hover */
+.side-filter li.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Optional: remove bottom border on last item */
+.side-filter li .dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+/* Style for submenu selected state */
+.side-filter li .dropdown-menu li.sub-active {
+  background: var(--green-dark);
+  color: #fff;
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: -40px;
+  background: #000;
+  color: #fff;
+  padding: 8px 12px;
+  z-index: 9999;
+  border-radius: 4px;
+  transition: top 0.15s ease-in-out;
+}
+.skip-link:focus {
+  top: 8px;
+}
+
+/* Visible focus state for side menu items */
+.side-filter li:focus, .side-filter li:focus-visible {
+  outline: 3px solid #07683a; /* stronger solid outline for accessibility */
+  outline-offset: 2px;
+  background: var(--green-dark);
+  color: #fff;
+}
+
+/* caret (chevron) for submenu */
+.submenu-caret {
+  float: right;
+  transition: transform 0.18s ease-in-out;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+.side-filter li.open > .submenu-caret {
+  transform: rotate(90deg);
+  color: var(--contrast-color);
+}
+
+/* visually-hidden helper */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; border: 0; padding: 0; margin: -1px;
+}
+
+/* For keyboard/touch toggling show dropdown when parent has .open */
+.side-filter li.open > .dropdown-menu {
+  display: block;
+}
+
+/* Increase tap targets slightly */
+.side-filter li { padding: 14px 18px; }
+/* Make Chemicals dropdown push other items down */
+.side-filter .dropdown-menu {
+  position: static !important;
+  display: none;
+  padding-left: 15px;
+  margin-top: 10px;
+}
+
+
+/* Show submenu when the parent is active */
+.side-filter .dropdown.open .dropdown-menu {
+  display: block;
 }

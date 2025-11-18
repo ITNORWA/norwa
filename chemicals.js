@@ -51,3 +51,37 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+sideFilter.addEventListener('click', function (ev) {
+  const clicked = ev.target.closest('li');
+  if (!clicked || !sideFilter.contains(clicked)) return;
+
+  const isDropdownParent = clicked.classList.contains('dropdown');
+  const isSub = clicked.parentElement.classList.contains('dropdown-menu');
+
+  // Get main dropdown parent for any click
+  const dropdownParent = clicked.closest('.dropdown');
+
+  // ----- TOGGLE BEHAVIOR -----
+  // Clicking "Chemicals" should open/close the submenu
+  if (isDropdownParent) {
+    dropdownParent.classList.toggle('open');
+  }
+
+  // Clicking a sub-filter should close the dropdown
+  if (isSub && dropdownParent) {
+    dropdownParent.classList.remove('open');
+  }
+
+  // ----- FILTER BEHAVIOR -----
+  const key =
+    clicked.dataset.filter ||
+    (dropdownParent && dropdownParent.dataset.filter) ||
+    '';
+
+  clearActive();
+  if (dropdownParent) dropdownParent.classList.add('active');
+  if (isSub) clicked.classList.add('sub-active');
+
+  applyFilter(key);
+  ev.stopPropagation();
+});
