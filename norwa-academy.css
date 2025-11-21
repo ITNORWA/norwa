@@ -1403,3 +1403,11 @@ section,
 }
 
 
+
+
+
+.facility-card {
+  height: auto !important;       /* allow the card to grow */
+  overflow: visible !important;  /* show all content */
+  display: block;                /* ensures natural vertical flow */
+}
