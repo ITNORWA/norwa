@@ -766,6 +766,7 @@ section,
 
 .projects .isotope-item {
   margin-bottom: 24px;
+  
 }
 
 .projects .project-item {
@@ -856,9 +857,12 @@ section,
   color: #056a46;
 }
 
+/* ...everything above stays exactly as you had it... */
+
 /* GLightbox inline modal content */
 .project-modal {
   max-width: 960px;
+  /* max-height: 300px; */
 }
 
 .project-modal-inner {
@@ -868,14 +872,19 @@ section,
   align-items: stretch;
 }
 
+/* UPDATED to support two images in the left column */
 .project-modal-image {
   flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .project-modal-image img {
   width: 100%;
   border-radius: 12px;
   display: block;
+  object-fit: cover;
 }
 
 .project-modal-body {
@@ -905,11 +914,13 @@ section,
 }
 
 /* Responsive modal layout */
-@media (max-width: 768px) {
+@media (max-width: 900px ) {
   .project-modal-inner {
     flex-direction: column;
   }
 }
+
+
 
 /*--------------------------------------------------------------
 # Footer (dark variant)
@@ -990,3 +1001,28 @@ section,
 }
 
 
+/* Override GLightbox modal width */
+.gslide-media.gslide-inline,
+.gslide-inline .ginner-container {
+  max-width: 1200px !important;
+  width: 90% !important;
+}
+
+/* Make modal taller */
+.gslide-inline .gslide-media {
+  height: auto !important;
+  max-height: 1000px !important;
+}
+
+/* Override your project modal */
+.project-modal {
+  max-width: 1200px !important;
+  max-height: 1000px !important;
+}
+
+/* Remove any GLightbox fixed values */
+.glined-content {
+  width: 100% !important;
+  height: auto !important;
+  /* max-height: none !important; */
+}

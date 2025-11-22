@@ -1,46 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Industrial & Commercial Water Treatment | Norwa Africa</title>
-  <meta name="description" content="Explore Norwa Africa's comprehensive industrial and commercial water treatment solutions, including purification plants, RO systems, water softeners, and a full range of accessories.">
-  <meta name="keywords" content="industrial water treatment, commercial water purification, reverse osmosis, water softening, ultrafiltration, chemical dosing">
+    <title> Chemicals & Media</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.webp" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon.webp" rel="apple-touch-icon">
+
+  <link rel="preload" as="image" href="assets/img/norwa/african-woman-pouring-water-recipient-outdoors.webp" fetchpriority="high">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="./chemicals.css" rel="stylesheet">
+  <link href="./about.css" rel="stylesheet">
+  <link rel="stylesheet" href="chemicals.css">
+
 
 </head>
 
-<body class="industrial-page">
+<body class="about-page">
 
- <!-- Preloader -->
-     
-    <div id="preloader"></div>
-
-  <header id="header" class="header d-flex align-items-center fixed-top">
+ <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-       <img src="assets/img/white norwa logo.svg" alt="Norwa Africa Ltd Logo" width="160" height="70">
 
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/white norwa logo.svg" alt="Norwa Africa Ltd Logo" width="160" height="70">
+      
       </a>
+
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
           <li class="dropdown"><a href="about.html"><span>Our Group</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="about.html">Who We Are</a></li>
@@ -48,23 +50,27 @@
               <li><a href="norwa-academy.html">Norwa Academy</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#" class="active"><span>Our Solutions</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+
+          <li class="dropdown"><a href="#"><span>Our Solutions</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="borehole.html">Borehole Solutions</a></li>
               <li class="dropdown"><a href="#"><span>Water Treatment</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                   <li><a href="domestic.html">Domestic Solution</a></li>
-                  <li><a href="industrial.html" class="active">Commercial & Industrial</a></li>
+                  <li><a href="industrial.html">Commercial & Industrial</a></li>
                   <li><a href="chemicals.html">Chemicals & Media</a></li>
                 </ul>
               </li>
               <li><a href="pumps.html">Water Pumps</a></li>
+              <li><a href="solar.html">Solar Solutions</a></li>
               <li><a href="datasheets.html">Datasheets</a></li>
             </ul>
           </li>
-          <li><a href="projects.html">Our References</a></li>
+
+          <li><a href="projects.html">Our Projects</a></li>
           <!-- <li><a href="news.html">News & Events</a></li> -->
-          <li class="dropdown"><a href="#"><span>Careers</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <!--<li><a href="events.html">Events</a></li>-->
+           <li class="dropdown"><a href="#"><span>Careers</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="journey.html">Candidate Journey</a></li>
               <li><a href="working-at-norwa.html">Working Environment</a></li>
@@ -72,180 +78,918 @@
               <li><a href="students.html">Students</a></li>
             </ul>
           </li>
+       
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
+
     </div>
   </header>
 
-  <main class="main">
-
-    <div class="page-title" style="background-image: url(assets/img/products/water-treament.jpg);">
+    <div class="page-title dark-background" style="background-image: url();">
       <div class="container position-relative">
-        <h1>Chemicals/Media  Water Treatment Solution</h1>
+        <h1>Chemicals & Media</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Chemical Solutions</li>
+            <li class="current">Chemicals</li>
           </ol>
         </nav>
       </div>
+    </div><!-- End Page Title -->
+<main class="wtc-main" id="water-treatment-page">
+      
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="wtc-sidebar">
+    <button class="wtc-sidebar-toggle" type="button" id="wtcSidebarToggle">
+      Sections & Filters
+      <span>▼</span>
+    </button>
+
+    <div class="wtc-sidebar-inner">
+      <div class="wtc-sidebar-card" id="wtcSidebarCard">
+        <h2 class="wtc-sidebar-title">Water Treatment Catalog</h2>
+        <p class="wtc-sidebar-subtitle">
+          Quickly jump between chemicals, filtration media, accessories and dosing systems.
+        </p>
+
+        <ul class="wtc-nav-list">
+          <!-- CHEMICALS -->
+          <li class="wtc-nav-item">
+            <button class="wtc-nav-link" data-section="chemicals" type="button">
+              <span class="label">Chemicals</span>
+              <span class="dot"></span>
+            </button>
+            <ul class="wtc-nav-sublist">
+              <li class="wtc-nav-subitem">
+                <button class="wtc-nav-sublink" data-section="chemicals" data-target="chem-disinfectants" type="button">
+                  Disinfectants
+                </button>
+              </li>
+              <li class="wtc-nav-subitem">
+                <button class="wtc-nav-sublink" data-section="chemicals" data-target="chem-softening" type="button">
+                  Softening &amp; pH control
+                </button>
+              </li>
+              <li class="wtc-nav-subitem">
+                <button class="wtc-nav-sublink" data-section="chemicals" data-target="chem-descaling" type="button">
+                  Descaling &amp; cleaning
+                </button>
+              </li>
+              <li class="wtc-nav-subitem">
+                <button class="wtc-nav-sublink" data-section="chemicals" data-target="chem-coagulation" type="button">
+                  Coagulation &amp; flocculation
+                </button>
+              </li>
+              <li class="wtc-nav-subitem">
+                <button class="wtc-nav-sublink" data-section="chemicals" data-target="chem-antiscalants" type="button">
+                  Antiscalants
+                </button>
+              </li>
+              <li class="wtc-nav-subitem">
+                <button class="wtc-nav-sublink" data-section="chemicals" data-target="chem-genesys" type="button">
+                  Genesys &amp; Genesol range
+                </button>
+              </li>
+            </ul>
+          </li>
+
+          <!-- MEDIA -->
+          <li class="wtc-nav-item">
+            <button class="wtc-nav-link" data-section="media" type="button">
+              <span class="label">Media</span>
+              <span class="dot"></span>
+            </button>
+            <ul class="wtc-nav-sublist">
+              <li class="wtc-nav-subitem">
+                <button class="wtc-nav-sublink" data-section="media" data-target="media-iron" type="button">
+                  Iron &amp; manganese removal
+                </button>
+              </li>
+              <li class="wtc-nav-subitem">
+                <button class="wtc-nav-sublink" data-section="media" data-target="media-softening" type="button">
+                  Water softening media
+                </button>
+              </li>
+              <li class="wtc-nav-subitem">
+                <button class="wtc-nav-sublink" data-section="media" data-target="media-organic" type="button">
+                  Organic &amp; chloride removal
+                </button>
+              </li>
+              <li class="wtc-nav-subitem">
+                <button class="wtc-nav-sublink" data-section="media" data-target="media-sediment" type="button">
+                  Sediment removal media
+                </button>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ACCESSORIES -->
+          <li class="wtc-nav-item">
+            <button class="wtc-nav-link" data-section="accessories" type="button">
+              <span class="label">Accessories</span>
+              <span class="dot"></span>
+            </button>
+            <ul class="wtc-nav-sublist">
+              <li class="wtc-nav-subitem">
+                <button class="wtc-nav-sublink" data-section="accessories" data-target="acc-frp" type="button">
+                  FRP Tanks
+                </button>
+              </li>
+              <li class="wtc-nav-subitem">
+                <button class="wtc-nav-sublink" data-section="accessories" data-target="acc-chem-tanks" type="button">
+                  Chemical Tanks
+                </button>
+              </li>
+              <li class="wtc-nav-subitem">
+                <button class="wtc-nav-sublink" data-section="accessories" data-target="acc-brine" type="button">
+                  Brine Tanks
+                </button>
+              </li>
+            </ul>
+          </li>
+
+          <!-- DOSING SYSTEMS -->
+          <li class="wtc-nav-item">
+            <button class="wtc-nav-link" data-section="dosing" type="button">
+              <span class="label">Chemical Dosers</span>
+              <span class="dot"></span>
+            </button>
+            <ul class="wtc-nav-sublist">
+              <li class="wtc-nav-subitem">
+                <button class="wtc-nav-sublink" data-section="dosing" data-target="dosing-pumps" type="button">
+                  Dosing Pumps
+                </button>
+              </li>
+              <li class="wtc-nav-subitem">
+                <button class="wtc-nav-sublink" data-section="dosing" data-target="dosing-klorman" type="button">
+                  Klorman Inline
+                </button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
     </div>
+  </aside>
 
-    <section class="industrial-section section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3">
-            <div class="sidebar-nav">
-              <h4>Treatment Solutions</h4>
-              <ul class="nav nav-tabs flex-column">
-                <li class="nav-item">
-                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-plants">Plants & Systems</button>
-                </li>
-                <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-chemicals">Chemicals & Media</button>
-                </li>
-                <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-components">Components & Accessories</button>
-                </li>
-              </ul>
+  <!-- ===== CONTENT AREA ===== -->
+  <div class="wtc-content">
+
+    <!-- ===================== CHEMICALS ===================== -->
+    <section class="wtc-section" id="chemicals">
+      <header>
+        <h2>Chemicals</h2>
+        <p class="section-intro">
+          Specialty chemicals for disinfection, softening, descaling, coagulation,
+          antiscalant dosing and RO/UF membrane cleaning &amp; preservation.
+        </p>
+      </header>
+
+      <div class="wtc-subgrid">
+        <!-- LEFT COLUMN -->
+        <div>
+          <!-- Disinfectants -->
+          <article class="wtc-subsection" id="chem-disinfectants">
+            <h3>1. Disinfectants</h3>
+            <div class="wtc-pill">Chlorination &amp; microbiological control</div>
+            <p class="wtc-text">
+              Disinfectants inactivate bacteria, viruses, fungi and other microorganisms in
+              potable water, process water and distribution networks.
+            </p>
+
+            <ul class="wtc-list">
+              <li>
+                <strong>Chlorine 65 (Granular Calcium Hypochlorite)</strong> – Ca(ClO)<sub>2</sub>
+                with 65% available chlorine. Supplied as tablets and granules in 1&nbsp;kg,
+                5&nbsp;kg, 20&nbsp;kg and 45&nbsp;kg packs. Effective against bacteria, viruses,
+                yeasts, fungi, mycobacteria and spores. Widely used for borehole and tank
+                disinfection.
+              </li>
+              <li>
+                <strong>H<sub>2</sub>O Guard / Bleach / Hypoconc</strong> – Sodium hypochlorite
+                (NaClO) liquid chlorine for:
+                <ul class="wtc-list">
+                  <li>Surface and water disinfection.</li>
+                  <li>Bleaching and odour removal.</li>
+                  <li>Regenerating DMI-65 iron &amp; manganese removal media.</li>
+                  <li>
+                    H<sub>2</sub>O Guard ≈ 1.5%, Bleach 3–5%, Hypoconc 10–12% active chlorine.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Sodium Metabisulphite (SMBS)</strong> – Na<sub>2</sub>S<sub>2</sub>O<sub>5</sub>
+                used for:
+                <ul class="wtc-list">
+                  <li>Preservation of RO &amp; UF membranes during shutdown.</li>
+                  <li>Dechlorination prior to RO membranes to prevent oxidation damage.</li>
+                </ul>
+              </li>
+            </ul>
+
+            <div class="wtc-image-grid mt-md">
+              <!-- 5–6 placeholders: replace src with your real images -->
+              <figure>
+                <img src="/assets/img/chemicals/chlorine _65.webp" alt="Chlorine 65 drums and containers" loading="lazy">
+                <span class="wtc-img-tag">Chlorine 65</span>
+              </figure>
+              <figure>
+                <img src="assets/img/chemicals/chlorine90.webp" alt="Liquid sodium hypochlorite containers" loading="lazy">
+                <span class="wtc-img-tag">Chlorine 90</span>
+              </figure>
+              <figure>
+                <img src="assets/chemicals/Milliard 5lbs Baking Soda _ Sodium Bicarbonate USP - 5 Pound Bulk Resealable Bag.jpg" alt="SMBS bags in a warehouse" loading="lazy">
+                <span class="wtc-img-tag">SMBS</span>
+              </figure>
+              <!-- <figure>
+                <img src="images/chem-disinfectants-4.jpg" alt="Operator dosing disinfectant into a tank" loading="lazy">
+                <span class="wtc-img-tag">Dosing</span>
+              </figure>
+              <figure>
+                <img src="images/chem-disinfectants-5.jpg" alt="Online chlorination system on a pipeline" loading="lazy">
+                <span class="wtc-img-tag">Chlorination skid</span>
+              </figure> -->
             </div>
-          </div>
+          </article>
 
-          <div class="col-lg-9">
-            <div class="tab-content">
+          <!-- Softening & pH control -->
+          <article class="wtc-subsection" id="chem-softening">
+            <h3>2. Softening &amp; pH Control</h3>
+            <div class="wtc-pill">Scaling control &amp; resin regeneration</div>
+            <p class="wtc-text">
+              Used to soften hard water, regenerate ion exchange resins and maintain correct
+              pH for optimal treatment performance and corrosion control.
+            </p>
+            <ul class="wtc-list">
+              <li>
+                <strong>pH Minus &amp; pH Plus</strong> – Supplied in 5&nbsp;kg &amp; 20&nbsp;kg packs.
+                <ul class="wtc-list">
+                  <li><em>pH Minus</em> – acid-based product for lowering pH and dissolving scale.</li>
+                  <li><em>pH Plus</em> – alkaline (sodium carbonate-based) product for raising pH and
+                    boosting alkalinity.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Industrial Salt</strong> – High-purity NaCl for regenerating
+                cation-exchange softening resin in domestic and industrial softeners.
+              </li>
+              <li>
+                <strong>Caustic Soda (NaOH)</strong> – 20&nbsp;L &amp; 25&nbsp;kg packs. Used to:
+                <ul class="wtc-list">
+                  <li>Increase pH for membrane cleaning (high pH CIP).</li>
+                  <li>Regenerate strong base anion resins.</li>
+                  <li>Clean drains and grease traps.</li>
+                </ul>
+              </li>
+            </ul>
 
-              <!-- ============================================= -->
-              <!-- TAB 1: PLANTS & SYSTEMS                       -->
-              <!-- ============================================= -->
-              <div class="tab-pane fade show active" id="tab-plants">
-                <div class="content-block">
-                  <h3>Purification Plants & Systems</h3>
-                  <p>Our comprehensive range of plants and systems are engineered for reliability and efficiency, tackling everything from dissolved solids to biological contaminants for commercial and industrial applications.</p>
-                  
-                  <hr class="my-4">
-
-                  <h4>Reverse Osmosis (RO) Systems</h4>
-                  <img src="./images/PXL_20240919_084907063.jpg" class="content-banner-image" alt="Reverse Osmosis System">
-                  <p>Reverse osmosis provides the finest level of filtration, acting as a barrier to salts, inorganic molecules, and organics. It is a highly effective process for removing contaminants like nitrates, metal ions, pesticides, and endotoxins. Our systems use advanced, spiral-wound membranes for high efficiency and easy maintenance, available for both 4” and 8” applications.</p>
-                  
-                  <h4>Water Softening Plants</h4>
-                  <p>Our water softeners use an ion exchange process to remove calcium and magnesium, preventing scale buildup that can damage pipes, boilers, and cooling towers. These systems are crucial for any facility dependent on high-performance equipment and are designed for both commercial and industrial use.</p>
-
-                  <h4>Ultrafiltration (UF) & UV Systems</h4>
-                  <img src="./images/20211005070936_IMG_0323.JPG" class="content-banner-image" alt="UV and UF Systems">
-                  <p><strong>Ultrafiltration (UF)</strong> is a pressure-driven membrane process excellent for separating particulate matter, making it ideal for desalination pretreatment and wastewater reclamation. <strong>UV Purification</strong> uses germicidal ultraviolet light to disrupt the DNA of microorganisms like bacteria and viruses, providing chemical-free disinfection without altering the taste or odor of water.</p>
-                </div>
-              </div>
-
-              <!-- ============================================= -->
-              <!-- TAB 2: CHEMICALS & MEDIA                      -->
-              <!-- ============================================= -->
-              <div class="tab-pane fade" id="tab-chemicals">
-                <div class="content-block">
-                  <h3>Specialty Chemicals & Filtration Media</h3>
-                  <p>We provide a wide range of high-performance chemicals and media to optimize your water treatment processes, from pre-treatment to disinfection and maintenance.</p>
-                  
-                  <hr class="my-4">
-                  
-                  <h4>Reverse Osmosis Chemicals (Genesys)</h4>
-                  <p>A complete line of specialty chemicals to maintain and restore membrane performance.</p>
-                  <ul>
-                      <li><strong>Antiscalants (Genesys LF, SI, RC):</strong> Broad-spectrum and silica-specific antiscalants to prevent inorganic scale and reduce cleaning frequency.</li>
-                      <li><strong>Membrane Cleaners (Genesol 37, 703, etc.):</strong> High and low pH formulations to remove inorganic scale, iron deposits, and organic foulants.</li>
-                      <li><strong>Biocides (Genesol 32):</strong> Broad-spectrum biocide for eliminating microbiological fouling and preserving membranes.</li>
-                  </ul>
-
-                  <h4>Filtration & Treatment Media</h4>
-                   <img src="./images/water-treatment-chemicals-media.jpg" class="content-banner-image" alt="Filtration Media">
-                   <ul>
-                      <li><strong>Iron Removal Media (DMI-65, Katalox, Birm):</strong> Catalytic media that utilizes oxidation and filtration to effectively remove iron and manganese.</li>
-                      <li><strong>Hardness Removal Media (Resin Cation/Anion):</strong> High-quality resin beads for use in water softeners and demineralization plants.</li>
-                      <li><strong>Sediment & Odor Removal:</strong> Includes sand, glass media, and Catalytic Granular Activated Carbon to remove suspended solids, chlorine, taste, and odors.</li>
-                  </ul>
-                </div>
-              </div>
-
-              <!-- ============================================= -->
-              <!-- TAB 3: COMPONENTS & ACCESSORIES               -->
-              <!-- ============================================= -->
-              <div class="tab-pane fade" id="tab-components">
-                <div class="content-block">
-                  <h3>Components & Accessories</h3>
-                  <p>A full inventory of essential components to build, upgrade, and maintain your commercial or industrial water treatment systems.</p>
-
-                  <hr class="my-4">
-
-                  <h4>Vessels, Tanks & Housings</h4>
-                  <div class="accessory-gallery">
-                    <div class="accessory-card">
-                        <img src="./images/frp/20220225101140_IMG_2545.JPG" alt="FRP Vessels">
-                        <div class="info"><strong>FRP Vessels</strong><span>For Media Filtration</span></div>
-                    </div>
-                    <div class="accessory-card">
-                        <img src="./images/ro-membranes.jpg" alt="Membrane Vessels">
-                        <div class="info"><strong>Membrane Vessels</strong><span>For RO Membranes</span></div>
-                    </div>
-                    <div class="accessory-card">
-                        <img src="./images/filterhousing.JPG" alt="Filter Housings">
-                        <div class="info"><strong>Micro-Filter Housings</strong><span>For Cartridge Filters</span></div>
-                    </div>
-                    <div class="accessory-card">
-                        <img src="./images/brinetank.JPG" alt="Chemical & Brine Tanks">
-                        <div class="info"><strong>Chemical & Brine Tanks</strong><span>For Dosing & Softeners</span></div>
-                    </div>
-                  </div>
-
-                  <h4>Dosing & Disinfection</h4>
-                  <div class="accessory-gallery">
-                      <div class="accessory-card">
-                          <img src="./images/DOSINGPUMP.jpg" alt="Dosing Pumps">
-                          <div class="info"><strong>Dosing Pumps</strong><span>Stable & Efficient Chemical Dosing</span></div>
-                      </div>
-                      <div class="accessory-card">
-                          <img src="./images/Domestic/chlorine.jpg" alt="Klorman Inline Unit">
-                          <div class="info"><strong>Klorman Inline Unit</strong><span>Point-of-Use Chlorination</span></div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-
+            <div class="wtc-image-grid mt-md">
+              <figure>
+                <img src="assets/img/chemicals/phplus.webp" alt="pH adjustment chemical containers" loading="lazy">
+                <span class="wtc-img-tag">pH Control</span>
+              </figure>
+              <figure>
+                <img src="assets/img/chemicals/salt.webp" alt="Bags of industrial salt for softeners" loading="lazy">
+                <span class="wtc-img-tag">Indstrial Salt</span>
+              </figure>
+              <figure>
+                <img src="assets/chemicals/20220622094300_IMG_2976.webp" alt="Caustic soda drums in storage" loading="lazy">
+                <span class="wtc-img-tag">Caustic soda</span>
+              </figure>
+              <!-- <figure>
+                <img src="images/chem-softening-4.jpg" alt="Softener brine tank setup" loading="lazy">
+                <span class="wtc-img-tag">Softener brine</span>
+              </figure> -->
+              <!-- <figure>
+                <img src="images/chem-softening-5.jpg" alt="Engineer checking pH meter" loading="lazy">
+                <span class="wtc-img-tag">pH monitoring</span>
+              </figure> -->
             </div>
-          </div>
+          </article>
+
+          <!-- Descaling & cleaning -->
+          <article class="wtc-subsection" id="chem-descaling">
+            <h3>3. Descaling &amp; Membrane Cleaning</h3>
+            <div class="wtc-pill">Low &amp; high pH cleaning agents</div>
+            <p class="wtc-text">
+              Descalants and membrane cleaners remove inorganic scale, organic deposits and
+              biofouling from boilers, heat exchangers and RO/NF/UF membranes.
+            </p>
+
+            <ul class="wtc-list">
+              <li>
+                <strong>Kleen MCT511E</strong> – High pH liquid formulation designed to remove
+                organics, silt and particulate deposits from polysulfone, fluorocarbon and
+                polyamide thin-film composite RO/UF membranes.
+              </li>
+              <li>
+                <strong>Kleen MCT882</strong> – Low pH formulation specifically designed to
+                remove calcium carbonate and other inorganic scales from RO, NF and UF
+                membranes, while also helping remove organic fouling.
+              </li>
+              <li>
+                <strong>Citric Acid</strong> – Organic acid cleaner:
+                <ul class="wtc-list">
+                  <li>Used as a mild descalant in steam generators, boilers and heat exchangers.</li>
+                  <li>Acts as a low pH adjuster in water treatment.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Descolont</strong> – Inhibited HCl-based descaler in 5&nbsp;kg &amp; 20&nbsp;kg
+                packs for removing limescale from hot water circuits (boilers, heaters,
+                exchangers). The inhibitor minimises metal corrosion.
+              </li>
+            </ul>
+
+            <div class="wtc-image-grid mt-md">
+              <figure>
+                <img src="assets/chemicals/20220622094225_IMG_2974.webp" alt="Membrane cleaning chemical containers" loading="lazy">
+                <span class="wtc-img-tag">Citric Acid</span>
+              </figure>
+              <figure>
+                <img src="assets/chemicals/20220622094300_IMG_2976.webp" alt="Technician performing CIP on RO system" loading="lazy">
+                <span class="wtc-img-tag">Caustic Soda</span>
+              </figure>
+             
+            </div>
+          </article>
+
+          <!-- Coagulation & flocculation -->
+          <article class="wtc-subsection" id="chem-coagulation">
+            <h3>4. Coagulation &amp; Flocculation</h3>
+            <div class="wtc-pill">Pre-treatment &amp; turbidity reduction</div>
+            <p class="wtc-text">
+              Coagulants and flocculants aggregate fine suspended solids into larger flocs
+              that can be removed by sedimentation or filtration.
+            </p>
+
+            <ul class="wtc-list">
+              <li>
+                <strong>Aluminium Sulphate (Alum)</strong> – Hydrated aluminium sulphate in
+                5&nbsp;kg, 20&nbsp;kg and 50&nbsp;kg packs for turbidity reduction and colour
+                removal in conventional treatment plants.
+              </li>
+              <li>
+                <strong>Polyaluminium Chloride (PAC)</strong> – 25&nbsp;kg packs, a high-performance
+                coagulant widely used in potable and wastewater treatment and for
+                regenerating fluoride removal media (e.g. Indion RS-F).
+              </li>
+              <li>
+                <strong>Genefloc GPF</strong> – General purpose flocculant:
+                <ul class="wtc-list">
+                  <li>Improves performance of RO pre-filtration (cartridge and multimedia).</li>
+                  <li>Ideal for surface, well &amp; process waters with medium–high SDI.</li>
+                  <li>Dosed continuously at 1–4&nbsp;mg/L with at least 5&nbsp;minutes contact time before filtration.</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Antiscalants -->
+          <article class="wtc-subsection" id="chem-antiscalants">
+            <h3>5. Antiscalants</h3>
+            <div class="wtc-pill">RO &amp; NF scale control</div>
+            <p class="wtc-text">
+              Antiscalants inhibit precipitation of sparingly soluble salts on membrane
+              surfaces, allowing higher recoveries and longer run times between cleanings.
+            </p>
+
+            <ul class="wtc-list">
+              <li>
+                <strong>Low Silica Antiscalants</strong> – For standard brackish waters where silica
+                is moderate; prevent CaCO<sub>3</sub> and sulphate scaling.
+              </li>
+              <li>
+                <strong>High Silica Antiscalants</strong> – For high-silica feeds to prevent silica
+                and silicate fouling, allowing higher recovery without scaling.
+              </li>
+              <li>
+                <strong>Hyperseparate / Hyperseperse-type Antiscalants</strong> – Versatile liquids
+                suitable for both high and low silica, depending on dilution and dose.
+              </li>
+            </ul>
+              <div class="wtc-image-grid mt-md">
+              <figure>
+                <img src="assets/img/chemicals/20220622094335_IMG_2977.JPG" alt="Chemical dosing pump on wall" loading="lazy">
+                <span class="wtc-img-tag">High Silica Antiscalants</span>
+              </figure>
+              <figure>
+                <img src="assets/img/chemicals/antiscalant_low.webp" alt="Multiple dosing pumps on common skid" loading="lazy">
+                <span class="wtc-img-tag">Low Silica Antiscalants</span>
+              </figure>
+              
+              
+            </div>
+          </article>
+        </div>
+
+        <!-- RIGHT COLUMN: GENESYS RANGE -->
+        <div>
+          <article class="wtc-subsection" id="chem-genesys">
+            <h3>6. Genesys &amp; Genesol Range</h3>
+            <div class="wtc-pill">Specialised RO membrane cleaners &amp; antiscalants</div>
+            <p class="wtc-text">
+              Genesys/Genesol products provide targeted cleaning and antiscalant solutions
+              for RO and NF systems, addressing inorganic scale, iron, organic fouling and
+              microbiological growth.
+            </p>
+
+            <ul class="wtc-list">
+              <li>
+                <strong>Genesol 37</strong> – Strongly acidic cleaner.
+                <ul class="wtc-list">
+                  <li>Application: Low pH membrane cleaning for inorganic scales &amp; iron.</li>
+                  <li>Use: 1–2% solution, soak/recycle 1–2&nbsp;hours.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Genesol 38</strong> – Inorganic scale &amp; iron deposit remover.
+                <ul class="wtc-list">
+                  <li>Use: 3–4% solution, soak/recycle 4–6&nbsp;hours.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Genesol 701</strong> – Low pH cleaner for stubborn inorganic scaling and iron
+                salts in RO/NF membranes.
+              </li>
+              <li>
+                <strong>Genesol 703</strong> – High pH cleaner for organic foulants.
+                <ul class="wtc-list">
+                  <li>Targets aluminium silicate and organic deposits.</li>
+                  <li>Use: 1–2% solution at max allowable pH, 4–6&nbsp;hours, preferably warm.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Genesol 704</strong> – High pH cleaner for organic fouling &amp; biofilm.
+                <ul class="wtc-list">
+                  <li>Effective against bacteria, fungi, algae and aluminium silicate.</li>
+                  <li>Use: 1–2% solution, soak/recycle 2–4&nbsp;hours.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Genesol 32</strong> – Biocidal cleaner &amp; preservative.
+                <ul class="wtc-list">
+                  <li>Off-line: 1000–1500&nbsp;mg/L for 6–8&nbsp;hours.</li>
+                  <li>Online: 700–1000&nbsp;mg/L for 8–12&nbsp;hours every 5–21&nbsp;days.</li>
+                  <li>Used in pre-treatment systems as well; deactivated with sodium bisulphite.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Genesys LF</strong> – Broad spectrum antiscalant.
+                <ul class="wtc-list">
+                  <li>Prevents CaCO<sub>3</sub>, iron and silica scaling.</li>
+                  <li>Dose: 2–5&nbsp;mg/L, continuously upstream of cartridge filters.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Genesys SI</strong> – High-silica antiscalant.
+                <ul class="wtc-list">
+                  <li>For high silica feeds and mixed scaling (CaCO<sub>3</sub>, Ca/Ba/Sr sulphate).</li>
+                  <li>Dose: 2–5&nbsp;mg/L.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Genesys RC</strong> – Antiscalant for small &amp; recycling RO plants (&lt;100&nbsp;m³/day).</li>
+                <ul class="wtc-list">
+                  <li>Prevents all common inorganic scales.</li>
+                  <li>Dose: 7–15&nbsp;mg/L, continuously upstream of cartridge filters.</li>
+                </ul>
+              </li>
+            </ul>
+
+            
+          </article>
         </div>
       </div>
     </section>
 
-  </main>
+    <!-- ===================== MEDIA ===================== -->
+    <section class="wtc-section" id="media">
+      <header>
+        <h2>Filtration Media</h2>
+        <p class="section-intro">
+          Engineered media for iron &amp; manganese removal, softening, organic/chloride
+          reduction and sediment filtration in pressure vessels and multimedia filters.
+        </p>
+      </header>
 
-      <!-- WhatsApp button -->
-    <div
-      id="whatsapp-button"
-      class="whatsapp-button"
-      aria-label="Contact via WhatsApp"
-      role="button"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
-        fill="currentColor"
-        class="bi bi-whatsapp"
-        viewBox="0 0 16 16"
-        aria-hidden="true"
-      >
-        <path
-          d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
-        />
-      </svg>
-    </div>
+      <div class="wtc-subgrid">
+        <!-- LEFT COLUMN -->
+        <div>
+          <!-- Iron removal -->
+          <article class="wtc-subsection" id="media-iron">
+            <h3>1. Iron Removal Media</h3>
+            <div class="wtc-pill">DMI-65, Katalox Light, Greensand/Birm</div>
+            <p class="wtc-text">
+              Iron and manganese removal media use catalytic oxidation and filtration to
+              convert dissolved metals to filterable solids.
+            </p>
+            <ul class="wtc-list">
+              <li>
+                <strong>DMI-65</strong> – Silica sand–based catalytic media that uses oxidation,
+                adsorption and filtration to remove iron, manganese and other impurities.
+                Regenerated/activated using sodium hypochlorite.
+              </li>
+              <li>
+                <strong>Katalox Light</strong> – Lightweight manganese dioxide–coated media
+                (≈66&nbsp;lb/ft³). Operates in pH 5.8–10.5 with a typical life of 7–10&nbsp;years.
+                Recommended for up to ~15&nbsp;ppm iron.
+              </li>
+              <li>
+                <strong>Greensand or Birm</strong> – Manganese oxide–coated media providing
+                oxidising environment and filtration.
+                <ul class="wtc-list">
+                  <li>Greensand is regenerated with potassium permanganate or chlorine.</li>
+                  <li>Works best at pH &gt; 7.5.</li>
+                  <li>Common where iron is &lt;10–12&nbsp;ppm and large volumes are treated.</li>
+                </ul>
+              </li>
+            </ul>
 
-      <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+            <div class="wtc-image-grid mt-md">
+              <figure>
+                <img src="assets/chemicals/Pre-treament-media-for-water.webp" alt="DMI-65 media bags" loading="lazy">
+                <span class="wtc-img-tag">DMI-65</span>
+              </figure>
+              
+            </div>
+          </article>
 
+          <!-- Softening media -->
+          <article class="wtc-subsection" id="media-softening">
+            <h3>2. Water Softening Media</h3>
+            <div class="wtc-pill">Cation &amp; anion exchange resins</div>
+            <p class="wtc-text">
+              Ion exchange resins remove hardness and specific ions by exchanging them for
+              sodium or other benign ions.
+            </p>
+            <ul class="wtc-list">
+              <li>
+                <strong>Resin – Cation</strong> – Strongly acidic polystyrene bead gel with
+                sulfonic acid functional groups, used for hardness removal (Ca²⁺, Mg²⁺).
+              </li>
+              <li>
+                <strong>Resin – Anion</strong> – Strong base polystyrene bead gel resin used for
+                nitrate, chloride and other anions, or in demineralisation trains.
+              </li>
+            </ul>
 
-   <footer id="footer" class="footer position-relative dark-background">
+            <div class="wtc-image-grid mt-md">
+              <!-- <figure>
+                <img src="images/media-softening-1.jpg" alt="Softener vessel with resin" loading="lazy">
+                <span class="wtc-img-tag">Softener vessel</span>
+              </figure>
+              <figure>
+                <img src="images/media-softening-2.jpg" alt="Cation resin beads close-up" loading="lazy">
+                <span class="wtc-img-tag">Cation resin</span>
+              </figure> -->
+              <figure>
+                <img src="assets/chemicals/20211026113554_IMG_0506 (1).webp" alt="Anion resin bags in storage" loading="lazy">
+                <span class="wtc-img-tag">Ion resin exchange</span>
+              </figure>
+              <figure>
+                <img src="assets/chemicals/Resin Cation Softener - 1 sak 25 Liter.webp" alt="Anion resin bags in storage" loading="lazy">
+                <span class="wtc-img-tag">Anion resin</span>
+              </figure>
+              <!-- <figure>
+                <img src="images/media-softening-4.jpg" alt="Duplex softener system installation" loading="lazy">
+                <span class="wtc-img-tag">Duplex system</span>
+              </figure>
+              <figure>
+                <img src="images/media-softening-5.jpg" alt="Technician sampling softened water" loading="lazy">
+                <span class="wtc-img-tag">Soft water test</span>
+              </figure> -->
+            </div>
+          </article>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div>
+          <!-- Organic & chloride removal -->
+          <article class="wtc-subsection" id="media-organic">
+            <h3>3. Organic &amp; Chloride Removal Media</h3>
+            <div class="wtc-pill">Catalytic granular activated carbon (GAC)</div>
+            <p class="wtc-text">
+              Specialised carbons remove organic contaminants, residual chlorine and
+              heavy hydrocarbons from process and condensate streams.
+            </p>
+            <ul class="wtc-list">
+              <li>
+                <strong>Catalytic Granular Activated Carbon</strong>
+                <ul class="wtc-list">
+                  <li>Removes organics, taste &amp; odour compounds and residual chlorine.</li>
+                  <li>
+                    Special acid-washed grades are designed to remove heavy hydrocarbons
+                    from recovered condensate.
+                  </li>
+                  <li>
+                    Acid washing removes soluble silica to prevent leaching into
+                    condensate or feed water.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <div class="wtc-image-grid mt-md">
+              <figure>
+                <img src="assets/img/norwa/20211026122345_IMG_0556.webp" alt="Granular activated carbon in hand" loading="lazy">
+                <span class="wtc-img-tag">GAC media</span>
+              </figure>
+            
+              <figure>
+                <img src="assets/img/norwa/WhatsApp Image 2021-10-27 at 1.54.33 PM.webp" alt="Warehouse with activated carbon bags" loading="lazy">
+                <span class="wtc-img-tag">Glass Stock</span>
+              </figure>
+              
+            </div>
+          </article>
+
+          <!-- Sediment removal media -->
+          <article class="wtc-subsection" id="media-sediment">
+            <h3>4. Sediment Removal Media</h3>
+            <div class="wtc-pill">Sand &amp; glass media</div>
+            <p class="wtc-text">
+              Inert granular media used as primary or polishing filtration for turbidity and
+              suspended solids removal.
+            </p>
+
+            <ul class="wtc-list">
+              <li>
+                <strong>Silica Sand Media</strong> – Graded silica available in various grain
+                sizes for multi-layer filters, rapid sand filters and backwashable vessels.
+              </li>
+              <li>
+                <strong>Glass Media</strong> – Environmentally friendly media produced from
+                recycled glass. Used as a higher performance alternative to sand with
+                improved backwash and lower biofilm formation.
+              </li>
+            </ul>
+
+            <div class="wtc-image-grid mt-md">
+              <figure>
+                <img src="assets/img/norwa/sand media D.webp" alt="Silica sand media close-up" loading="lazy">
+                <span class="wtc-img-tag">Silica sand</span>
+              </figure>
+              <figure>
+                <img src="assets/img/norwa/WhatsApp Image 2021-10-27 at 1.54.33 PM.webp" alt="Glass filtration media" loading="lazy">
+                <span class="wtc-img-tag">Glass media</span>
+              </figure>
+              <!-- <figure>
+                <img src="images/media-sediment-3.jpg" alt="Multimedia filtration vessels" loading="lazy">
+                <span class="wtc-img-tag">Multimedia filter</span>
+              </figure>
+              <figure>
+                <img src="images/media-sediment-4.jpg" alt="Filter backwash in progress" loading="lazy">
+                <span class="wtc-img-tag">Backwashing</span>
+              </figure>
+              <figure>
+                <img src="images/media-sediment-5.jpg" alt="Sediment removal comparison" loading="lazy">
+                <span class="wtc-img-tag">Clarity</span>
+              </figure> -->
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ACCESSORIES ===================== -->
+    <section class="wtc-section" id="accessories">
+      <header>
+        <h2>Accessories</h2>
+        <p class="section-intro">
+          Structural FRP vessels, chemical tanks and brine tanks that complete water
+          treatment skids and plant layouts.
+        </p>
+      </header>
+
+      <div class="wtc-subgrid">
+        <!-- LEFT COLUMN -->
+        <div>
+          <!-- FRP Tanks -->
+          <article class="wtc-subsection" id="acc-frp">
+            <h3>1. FRP Tanks</h3>
+            <div class="wtc-pill">Pressure vessels for filters &amp; softeners</div>
+            <p class="wtc-text">
+              FRP (Fiberglass Reinforced Plastic) tanks are lightweight, corrosion-resistant
+              pressure vessels ideal for residential and light commercial applications.
+            </p>
+            <ul class="wtc-list">
+              <li>
+                Ideal for softeners, multimedia filters, carbon filters and specialty media.
+              </li>
+              <li>Available in a wide range of diameters and heights.</li>
+              <li>Standard polyester or chemical-resistant vinylester options.</li>
+              <li>Easy to handle, transport and install on site.</li>
+            </ul>
+
+            <div class="wtc-image-grid mt-md">
+              <figure>
+                <img src="images/frp/frp-tank.png" alt="Range of FRP pressure vessels" loading="lazy">
+                <!-- <span class="wtc-img-tag"></span> -->
+              </figure>
+              <figure>
+                <img src="images/frp/frp-tanks-small.jpg" alt="Softener system using FRP tanks" loading="lazy">
+                <!-- <span class="wtc-img-tag">Softener</span> -->
+              </figure>
+              <figure>
+                <img src="images/frp/20220225101140_IMG_2545.JPG" alt="Multimedia filter with FRP vessel" loading="lazy">
+                <!-- <span class="wtc-img-tag">Filter</span> -->
+              </figure>
+              <figure>
+                <img src="assets/chemicals/FRP Pressure Vessels Manufacturer.jpg" alt="FRP vessels lined up in warehouse" loading="lazy">
+                <!-- <span class="wtc-img-tag">Stock</span> -->
+              </figure>
+              <figure>
+                <img src="assets/chemicals/FRP Pressure Tank in India.jpg" alt="Technician installing FRP vessel" loading="lazy">
+                <!-- <span class="wtc-img-tag">Installation</span> -->
+              </figure>
+            </div>
+          </article>
+
+          <!-- Chemical Tanks -->
+          <article class="wtc-subsection" id="acc-chem-tanks">
+            <h3>2. Chemical Tanks</h3>
+            <div class="wtc-pill">Storage for liquid chemicals</div>
+            <p class="wtc-text">
+              Chemical storage tanks are used for holding dosing chemicals such as
+              antiscalants, coagulants, chlorine solutions and membrane cleaners.
+            </p>
+            <ul class="wtc-list">
+              <li>Available in multiple capacities (e.g. 50&nbsp;L, 100&nbsp;L, 200&nbsp;L, 500&nbsp;L+).</li>
+              <li>High chemical resistance and UV stabilised materials.</li>
+              <li>Provision for level indicators, suction lances and mixer mounting.</li>
+            </ul>
+
+            <div class="wtc-image-grid mt-md">
+              <figure>
+                <img src="images/brine-tank/Chemical-tank.webp" alt="Different sizes of chemical storage tanks" loading="lazy">
+                <span class="wtc-img-tag">20</span>
+              </figure>
+              <figure>
+                <img src="images/brine-tank/Chemical-tank.webp" alt="Chemical tank with mixer" loading="lazy">
+                <span class="wtc-img-tag">50L</span>
+              </figure>
+              <figure>
+                <img src="images/brine-tank/Chemical-tank.webp" alt="Dosing skid with chemical tanks" loading="lazy">
+                <span class="wtc-img-tag">100L</span>
+              </figure>
+              <figure>
+                <img src="images/brine-tank/Chemical-tank.webp" alt="Outdoor chemical tank installation" loading="lazy">
+                <span class="wtc-img-tag">200L</span>
+              </figure>
+              <figure>
+                <img src="images/brine-tank/Chemical-tank.webp" alt="Technician inspecting tank fittings" loading="lazy">
+                <span class="wtc-img-tag">500L</span>
+              </figure>
+            </div>
+          </article>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div>
+          <!-- Brine Tanks -->
+          <article class="wtc-subsection" id="acc-brine">
+            <h3>3. Brine Tanks</h3>
+            <div class="wtc-pill">Salt storage for softener regeneration</div>
+            <p class="wtc-text">
+              Brine tanks hold salt and brine solution for automatic regeneration of water
+              softeners, ensuring consistent hardness removal.
+            </p>
+            <ul class="wtc-list">
+              <li>Compatible with domestic, commercial and industrial softeners.</li>
+              <li>Various footprints and heights to match site space and resin volume.</li>
+              <li>Equipped with salt grids and brine wells for stable operation.</li>
+            </ul>
+
+            <div class="wtc-image-grid mt-md">
+              <!-- <figure>
+                <img src="images/brine-tank/Brine-tank.webp" alt="Brine tank next to softener vessel" loading="lazy">
+                <span class="wtc-img-tag">Softener brine</span>
+              </figure>
+              <figure>
+                <img src="images/brine-tank/Brine tanks valve.jpg" alt="Multiple brine tanks in plant room" loading="lazy">
+                <span class="wtc-img-tag">Plant room</span>
+              </figure> -->
+              <figure>
+                <img src="images/brine-tank/Chemical-tank.webp" alt="Open brine tank showing salt bed" loading="lazy">
+                <!-- <span class="wtc-img-tag">Salt bed</span> -->
+              </figure>
+              <figure>
+                <img src="images/brine-tank/pe-brine-tank.png" alt="Compact brine tank for small softener" loading="lazy">
+                <!-- <span class="wtc-img-tag">Compact</span> -->
+              </figure>
+              <figure>
+                <img src="images/brinetank.JPG" alt="Technician cleaning brine tank" loading="lazy">
+                <!-- <span class="wtc-img-tag">Maintenance</span> -->
+              </figure>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CHEMICAL DOSERS ===================== -->
+    <section class="wtc-section" id="dosing">
+      <header>
+        <h2>Chemical Dosers</h2>
+        <p class="section-intro">
+          Precision dosing equipment for disinfectants, antiscalants, coagulants and other
+          water treatment chemicals.
+        </p>
+      </header>
+
+      <div class="wtc-subgrid">
+        <!-- LEFT COLUMN -->
+        <div>
+          <!-- Dosing Pumps -->
+          <article class="wtc-subsection" id="dosing-pumps">
+            <h3>1. Dosing Pumps</h3>
+            <div class="wtc-pill">Steady, energy-efficient metering</div>
+            <p class="wtc-text">
+              Solenoid-driven or motor-driven dosing pumps provide accurate chemical
+              injection proportional to flow or time, maintaining stable treatment levels.
+            </p>
+            <ul class="wtc-list">
+              <li>
+                <strong>Steady dosing performance</strong> – Solenoid draws only the power
+                required under current process conditions, improving efficiency.
+              </li>
+              <li>
+                <strong>Stable output</strong> – Performance is not affected by supply
+                voltage fluctuations.
+              </li>
+              <li>
+                <strong>Simple interface</strong> – Self-explanatory menus available in multiple
+                languages with clear function-based parameters.
+              </li>
+              <li>
+                <strong>Intelligent display</strong> – Once a function is selected, the pump
+                only shows the relevant parameters for that mode.
+              </li>
+            </ul>
+
+            <div class="wtc-image-grid mt-md">
+              <figure>
+                <img src="images/DOSINGPUMP.webp" alt="Chemical dosing pump on wall" loading="lazy">
+                <span class="wtc-img-tag">Dosing pump</span>
+              </figure>
+              <figure>
+                <img src="images/Dosing-pump.png" alt="Multiple dosing pumps on common skid" loading="lazy">
+                <span class="wtc-img-tag">Dosing skid</span>
+              </figure>
+              <figure>
+                <img src="assets/chemicals/20211026173815_IMG_0687.JPG" alt="Operator programming dosing pump" loading="lazy">
+                <span class="wtc-img-tag">Programming</span>
+              </figure>
+             
+              
+            </div>
+          </article>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div>
+          <!-- Klorman Inline -->
+          <article class="wtc-subsection" id="dosing-klorman">
+            <h3>2. Klorman Inline Disinfection</h3>
+            <div class="wtc-pill">Point-of-use in-line chlorination</div>
+            <p class="wtc-text">
+              Klorman is a simple in-line disinfection system that uses a compacted calcium
+              hypochlorite cartridge to release active chlorine into the water stream.
+            </p>
+
+            <ul class="wtc-list">
+              <li>Designed for point-of-use or small system chlorination.</li>
+              <li>Dosage adjusted by projecting the cartridge further into the flow path.</li>
+              <li>
+                Capable of up to 500&nbsp;m³ at 1&nbsp;ppm with no chlorine demand (capacity
+                depends on site conditions).
+              </li>
+              <li>Max flow rate: 16&nbsp;m³/h; operating pressure: 0.5–6&nbsp;bar.</li>
+            </ul>
+
+            <div class="wtc-image-grid mt-md">
+              <figure>
+                <img src="images/Chemicals/Klormann.jpg" alt="Klorman inline chlorinator installed on pipe" loading="lazy">
+                <span class="wtc-img-tag">Klorman unit</span>
+              </figure>
+              <figure>
+                <img src="images/Chemicals/Klorman-Cartridge.jpg" alt="Close-up of Klorman cartridge" loading="lazy">
+                <span class="wtc-img-tag">Cartridge</span>
+              </figure>
+             
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer id="footer" class="footer position-relative dark-background">
 
     <div class="container footer-top">
       <div class="row gy-4">
@@ -261,11 +1005,10 @@
             <p><strong>Email:</strong> <span>info@norwaafrica.com</span></p>
           </div>
           <div class="social-links d-flex mt-4">
-            <!-- Accessibility Fix: Added aria-label for screen readers -->
-            <a href="https://www.youtube.com/@NorwaafricaLtd_" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-            <a href="https://www.facebook.com/Norwaafrica" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/norwaafricaltd/" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/75512792/admin/dashboard/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.youtube.com/@NorwaafricaLtd_"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.facebook.com/Norwaafrica"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/norwaafricaltd/"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/75512792/admin/dashboard/"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
 
@@ -305,7 +1048,7 @@
           <ul>
             <li><a href="news.html">News</a></li>
             <li><a href="news.html">Newsletters</a></li>
-            <li><a href="solution.html">Projects</a></li>
+            <li><a href="projects.html">Projects</a></li>
             <li><a href="how-to.html">How to videos</a></li>
             <li><a href="feedback.html">Customer Feedback</a></li>
           </ul>
@@ -317,26 +1060,31 @@
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">Norwa Africa Ltd</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
-
+        
       </div>
     </div>
 
   </footer>
+<div
+  id="whatsapp-button"
+  class="whatsapp-button"
+  aria-label="Contact via WhatsApp"
+  role="button"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+      </svg>
+</div>
+
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Performance Fix: Added defer attribute to all scripts -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-  <script src="assets/vendor/php-email-form/validate.js" defer></script>
-  <script src="assets/vendor/aos/aos.js" defer></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
+  <!-- Preloader -->
+  <!-- <div id="preloader"></div> -->
+<!-- ===== INTERACTION SCRIPT (SHOW/HIDE CONTENT) ===== -->
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js" defer></script>
 
+<script src="chemicals.js"></script>
+<script src="/assets/js/main.js"></script>
 </body>
 </html>
