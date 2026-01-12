@@ -192,7 +192,12 @@
 
   <main>
     <div style="background-color: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); width: 100%; max-width: 850px; border: 1px solid #e0e0e0;">
-        <form id="reportForm" action="#" method="POST" enctype="multipart/form-data">
+        <form id="reportForm" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="access_key" value="fe107ede-cc92-4f78-8c52-85dda997a9d5">
+            <input type="hidden" name="redirect" value="water%20Analysis.html?success=1">
+            <div id="web3forms-success" class="alert alert-success d-none" role="alert">
+                Thanks for the reach out. We will get back as soon as possible.
+            </div>
             
             <div id="formGrid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
                 <!-- Form Title Inside the Box -->
@@ -230,11 +235,14 @@
                     <input type="text" id="location" name="location" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-size: 16px;"> 
                 </div>
 
+                <!-- File upload disabled for Web3Forms free tier -->
+                <!--
                 <div class="full-width-item" style="grid-column: span 2;">
                     <label for="fileAttachment" style="display: block; margin-bottom: 8px; color: #2d465e; font-weight: bold; font-size: 0.9em;">File/Photo/Video Attachment <span style="color: #d9534f;">*</span></label>
                     <input type="file" id="fileAttachment" name="fileAttachment" accept="image/*,application/pdf,video/*" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px;">
                     <small style="display: block; margin-top: 8px; color: #777;">Max file size: 2MB. Accepted formats: PDF, JPG, PNG, MP4.</small>
                 </div>
+                -->
 
                 <div class="full-width-item" style="grid-column: span 2;">
                     <label for="description" style="display: block; margin-bottom: 8px; color: #2d465e; font-weight: bold; font-size: 0.9em;">Description</label>
@@ -250,15 +258,6 @@
     
     <script>
         document.getElementById('reportForm').addEventListener('submit', function(event) {
-            const fileInput = document.getElementById('fileAttachment');
-            const file = fileInput.files[0];
-            const maxFileSize = 2 * 1024 * 1024; // 2MB in bytes
-
-            if (file && file.size > maxFileSize) {
-                alert('The selected file exceeds the maximum size of 2MB. Please choose a smaller file.');
-                event.preventDefault(); // Prevent form submission
-            }
-
             const requiredFields = document.querySelectorAll('[required]');
             let allFieldsFilled = true;
             requiredFields.forEach(field => {
@@ -376,6 +375,15 @@
 
 <!-- Main JS File -->
 <script src="assets/js/main.js"></script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('success') === '1') {
+    const successAlert = document.getElementById('web3forms-success');
+    if (successAlert) {
+      successAlert.classList.remove('d-none');
+    }
+  }
+</script>
 
 </body>
 
