@@ -182,7 +182,12 @@
             <div class="contact-form-wrapper">
               <h2 class="text-center mb-4">Get in Touch</h2>
 
-              <form action="forms/contact.php" method="post" class="php-email-form">
+              <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="fe107ede-cc92-4f78-8c52-85dda997a9d5">
+                <input type="hidden" name="redirect" value="contact.html?success=1">
+                <div id="web3forms-success" class="alert alert-success d-none" role="alert">
+                  Thanks for the reach out. We will get back as soon as possible.
+                </div>
                 <div class="row g-3">
                   <div class="col-md-6">
                     <div class="form-group">
@@ -351,6 +356,15 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('success') === '1') {
+      const successAlert = document.getElementById('web3forms-success');
+      if (successAlert) {
+        successAlert.classList.remove('d-none');
+      }
+    }
+  </script>
 
 </body>
 
