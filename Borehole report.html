@@ -192,7 +192,12 @@
 
   <main>
     <div style="background-color: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); width: 100%; max-width: 850px; border: 1px solid #e0e0e0;">
-        <form id="reportForm" action="#" method="POST" enctype="multipart/form-data">
+        <form id="reportForm" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="access_key" value="fe107ede-cc92-4f78-8c52-85dda997a9d5">
+            <input type="hidden" name="redirect" value="Borehole%20report.html?success=1">
+            <div id="web3forms-success" class="alert alert-success d-none" role="alert">
+                Thanks for the reach out. We will get back as soon as possible.
+            </div>
             
             <div id="formGrid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
                 <!-- Form Title Inside the Box -->
@@ -230,11 +235,14 @@
                     <input type="text" id="location" name="location" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-size: 16px;"> 
                 </div>
 
+                <!-- File upload disabled for Web3Forms free tier -->
+                <!--
                 <div class="full-width-item" style="grid-column: span 2;">
                     <label for="fileAttachment" style="display: block; margin-bottom: 8px; color: #2d465e; font-weight: bold; font-size: 0.9em;">File/Photo/Video Attachment <span style="color: #d9534f;">*</span></label>
                     <input type="file" id="fileAttachment" name="fileAttachment" accept="image/*,application/pdf,video/*" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px;">
                     <small style="display: block; margin-top: 8px; color: #777;">Max file size: 2MB. Accepted formats: PDF, JPG, PNG, MP4.</small>
                 </div>
+                -->
 
                 <div class="full-width-item" style="grid-column: span 2;">
                     <label for="description" style="display: block; margin-bottom: 8px; color: #2d465e; font-weight: bold; font-size: 0.9em;">Description</label>
@@ -250,15 +258,6 @@
     
     <script>
         document.getElementById('reportForm').addEventListener('submit', function(event) {
-            const fileInput = document.getElementById('fileAttachment');
-            const file = fileInput.files[0];
-            const maxFileSize = 2 * 1024 * 1024; // 2MB in bytes
-
-            if (file && file.size > maxFileSize) {
-                alert('The selected file exceeds the maximum size of 2MB. Please choose a smaller file.');
-                event.preventDefault(); // Prevent form submission
-            }
-
             const requiredFields = document.querySelectorAll('[required]');
             let allFieldsFilled = true;
             requiredFields.forEach(field => {
@@ -278,7 +277,7 @@
 
     <div class="container footer-top">
       <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
+        <div class="col-lg-3 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
             <span class="sitename">Norwa Africa</span>
           </a>
@@ -296,8 +295,17 @@
             <a href="https://www.linkedin.com/company/75512792/admin/dashboard/"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
+<div class="col-lg-3 col-md-6 footer-links">
+          <h4>Locations <span class="location-icon location-icon--title"><i class="bi bi-geo-alt-fill"></i></span></h4>
+          <ul class="location-list">
+            <li><a href="https://www.google.com/maps/search/?api=1&query=Bunyala%20junction%20with%20Baricho%20Rd,%20Nairobi"><span class="location-text">Bunyala junction Baricho Rd, Nairobi</span></a></li>
+            <li><a href="https://www.google.com/maps/search/?api=1&query=Dar%20Es%20Salaam%20Rd,%20Nairobi"><span class="location-text">Dar Es Salaam Rd, Nairobi</span></a></li>
+            <li><a href="https://www.google.com/maps/search/?api=1&query=Cabanas,%20Mombasa%20Road,%20Nairobi"><span class="location-text">Cabanas, Mombasa Road, Nairobi</span></a></li>
+            <li><a href="https://www.google.com/maps?q=-4.062417,39.665306"><span class="location-text">Mombasa</span></a></li>
+            <li><a href="https://www.google.com/maps?q=-6.778389,39.249944"><span class="location-text">Tanzania</span></a></li>
+          </ul>
+        </div>
+<div class="col-lg-2 col-md-3 footer-links">
           <h4>Useful Links</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -307,8 +315,7 @@
             <li><a href="privacy.html">Privacy policy</a></li>
           </ul>
         </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
+<div class="col-lg-2 col-md-3 footer-links">
           <h4>Our Solutions</h4>
           <ul>
             <li><a href="#">Reverse Osmosis Systems</a></li>
@@ -318,24 +325,12 @@
             <li><a href="dna.html">DNA Pumps</a></li>
           </ul>
         </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
+<div class="col-lg-2 col-md-3 footer-links">
           <h4>Branches</h4>
           <ul>
             <li><a href="#">Kenya</a></li>
             <li><a href="#">Tanzania</a></li>
             <li><a href="#">Uganda</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>News & Press</h4>
-          <ul>
-            <li><a href="news.html">News</a></li>
-            <li><a href="news.html">Newsletters</a></li>
-           <li><a href="projects.html">Projects</a></li>
-            <li><a href="how-to.html">How to videos</a></li>
-            <li><a href="feedback.html">Customer Feedback</a></li>
           </ul>
         </div>
 
@@ -376,6 +371,15 @@
 
 <!-- Main JS File -->
 <script src="assets/js/main.js"></script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('success') === '1') {
+    const successAlert = document.getElementById('web3forms-success');
+    if (successAlert) {
+      successAlert.classList.remove('d-none');
+    }
+  }
+</script>
 
 </body>
 
