@@ -1542,3 +1542,25 @@ body.modal-open {
 .footer .footer-project-title {
   color: #ffffff !important;
 }
+
+/* Footer cards mobile responsiveness */
+@media (max-width: 576px) {
+  .footer .footer-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer .footer-card--wide {
+    grid-column: span 1;
+  }
+
+  .footer .footer-subscribe-row button,
+  .footer .footer-card-link--button,
+  .footer .footer-project-count {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer .footer-subscribe-row {
+    gap: 10px;
+  }
+}
