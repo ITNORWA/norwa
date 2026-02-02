@@ -6,6 +6,16 @@
 (function () {
   "use strict";
 
+  /**
+   * Fix malformed hrefs (e.g., \"blog.html\") introduced in some nav items
+   */
+  document.querySelectorAll("a[href]").forEach((link) => {
+    const href = link.getAttribute("href");
+    if (!href) return;
+    const cleaned = href.replace(/\\+/g, "").replace(/^"+|"+$/g, "");
+    if (cleaned !== href) link.setAttribute("href", cleaned);
+  });
+
   // Utility: throttle high-frequency events
   function throttle(fn, wait) {
     let timeout = null;
