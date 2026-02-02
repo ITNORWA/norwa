@@ -25,7 +25,12 @@
   };
 
   const slug = getSlug();
-  if (!slug) return;
+  if (!slug) {
+    if (contentEl) {
+      contentEl.innerHTML = "<p>Post not found. Please go back to the blog list.</p>";
+    }
+    return;
+  }
 
   const query = `*[_type == "post" && slug.current == "${slug}" && !(_id in path("drafts.**"))][0]{
     title,
