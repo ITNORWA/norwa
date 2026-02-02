@@ -24,7 +24,6 @@
     const params = new URLSearchParams({
       query,
       perspective: "published",
-      useCdn: "true",
     });
     return `${base}?${params.toString()}`;
   };
