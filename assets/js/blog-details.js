@@ -21,7 +21,12 @@
 
   const buildQueryUrl = (query) => {
     const base = `https://${cfg.projectId}.api.sanity.io/v${cfg.apiVersion}/data/query/${cfg.dataset}`;
-    return `${base}?query=${encodeURIComponent(query)}`;
+    const params = new URLSearchParams({
+      query,
+      perspective: "published",
+      useCdn: "true",
+    });
+    return `${base}?${params.toString()}`;
   };
 
   const slug = getSlug();
@@ -84,9 +89,12 @@
     return null;
   };
 
-  fetch(buildQueryUrl(query))
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 15000);
+  fetch(buildQueryUrl(query), { signal: controller.signal })
     .then(res => res.json())
     .then(({ result }) => {
+      clearTimeout(timer);
       if (!result) {
         contentEl.innerHTML = "<p>Post not found.</p>";
         return;
@@ -146,6 +154,7 @@
       contentEl.innerHTML = `${videoHtml}${renderPortableText(result.body)}`;
     })
     .catch(() => {
+      clearTimeout(timer);
       contentEl.innerHTML = "<p>Unable to load post.</p>";
     });
 })();

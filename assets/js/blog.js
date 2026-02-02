@@ -23,7 +23,12 @@
 
   const buildQueryUrl = (query) => {
     const base = `https://${cfg.projectId}.api.sanity.io/v${cfg.apiVersion}/data/query/${cfg.dataset}`;
-    return `${base}?query=${encodeURIComponent(query)}`;
+    const params = new URLSearchParams({
+      query,
+      perspective: "published",
+      useCdn: "true",
+    });
+    return `${base}?${params.toString()}`;
   };
 
   const renderPosts = (posts) => {
@@ -112,7 +117,10 @@
     }`;
 
     try {
-      const res = await fetch(buildQueryUrl(query));
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 15000);
+      const res = await fetch(buildQueryUrl(query), { signal: controller.signal });
+      clearTimeout(timer);
       const json = await res.json();
       if (!json.result) throw new Error("No results");
       renderPosts(json.result.posts || []);
