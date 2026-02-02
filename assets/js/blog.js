@@ -22,10 +22,6 @@
 
   const renderPosts = (posts) => {
     listEl.innerHTML = "";
-    const isLocal =
-      window.location.hostname === "localhost" ||
-      window.location.hostname === "127.0.0.1";
-
     const calcReadMinutes = (body) => {
       if (!Array.isArray(body)) return 1;
       const text = body
@@ -49,9 +45,7 @@
     };
 
     posts.forEach((post) => {
-      const href = isLocal
-        ? `blog-details.html?slug=${post.slug}`
-        : `/blog/${post.slug}`;
+      const href = `blog-details.html?slug=${post.slug}`;
       const img = post.coverImage || "assets/img/placeholder.webp";
       const dateText = formatDate(post.publishedAt);
       const readMinutes = calcReadMinutes(post.body);
