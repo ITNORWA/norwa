@@ -26,9 +26,11 @@
 
   const slug = getSlug();
   if (!slug) {
-    if (contentEl) {
-      contentEl.innerHTML = "<p>Post not found. Please go back to the blog list.</p>";
-    }
+    const isLocal =
+      window.location.hostname === "localhost" ||
+      window.location.hostname === "127.0.0.1";
+    const fallback = isLocal ? "blog.html" : "/blog";
+    window.location.href = fallback;
     return;
   }
 
