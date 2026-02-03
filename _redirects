@@ -1,0 +1,3 @@
+/blog/* /blog-details.html?slug=:splat 200
+/blog-details /blog 301
+/blog-details/ /blog 301

@@ -6,6 +6,16 @@
 (function () {
   "use strict";
 
+  /**
+   * Fix malformed hrefs (e.g., \"blog.html\") introduced in some nav items
+   */
+  document.querySelectorAll("a[href]").forEach((link) => {
+    const href = link.getAttribute("href");
+    if (!href) return;
+    const cleaned = href.replace(/\\+/g, "").replace(/^"+|"+$/g, "");
+    if (cleaned !== href) link.setAttribute("href", cleaned);
+  });
+
   // Utility: throttle high-frequency events
   function throttle(fn, wait) {
     let timeout = null;
@@ -209,6 +219,128 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     whatsAppButton.addEventListener("mouseleave", () => {
       document.body.classList.remove("link-cursor");
+    });
+  }
+
+  // --- Contact Map Controls ---
+  const contactMapFrame = document.getElementById("contact-map-frame");
+  if (contactMapFrame) {
+    const mapSelect = document.getElementById("contact-map-select");
+    const mapJump = document.getElementById("contact-map-jump");
+
+    const setMapQuery = (query) => {
+      if (!query) return;
+      const embedUrl = `https://www.google.com/maps?q=${encodeURIComponent(query)}&output=embed`;
+      contactMapFrame.src = embedUrl;
+    };
+
+    if (mapJump && mapSelect) {
+      mapJump.addEventListener("click", () => setMapQuery(mapSelect.value));
+    }
+  }
+
+  // --- Footer Locations Map Modal ---
+  const locationLinks = document.querySelectorAll(".location-list a");
+  if (locationLinks.length) {
+    let modal = document.getElementById("location-map-modal");
+    if (!modal) {
+      modal = document.createElement("div");
+      modal.id = "location-map-modal";
+      modal.className = "location-map-modal";
+      modal.setAttribute("aria-hidden", "true");
+      modal.innerHTML = `
+        <div class="location-modal-dialog" role="dialog" aria-modal="true" aria-label="Location map">
+          <div class="location-modal-header">
+            <h5 class="location-modal-title">Location</h5>
+            <div class="location-modal-actions">
+              <select class="location-modal-select" aria-label="Other locations"></select>
+              <button type="button" class="location-modal-jump">Search location</button>
+              <button type="button" class="location-modal-close" aria-label="Close map">×</button>
+            </div>
+          </div>
+          <div class="location-modal-body">
+            <iframe title="Location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(modal);
+    }
+
+    const modalTitle = modal.querySelector(".location-modal-title");
+    const modalFrame = modal.querySelector("iframe");
+    const modalClose = modal.querySelector(".location-modal-close");
+    const modalSelect = modal.querySelector(".location-modal-select");
+    const modalJump = modal.querySelector(".location-modal-jump");
+
+    const buildEmbedUrl = (href) => {
+      try {
+        const url = new URL(href);
+        const query = url.searchParams.get("query") || url.searchParams.get("q");
+        if (query) {
+          return `https://www.google.com/maps?q=${encodeURIComponent(query)}&output=embed`;
+        }
+      } catch (err) {
+        // Fallback to raw href if URL parsing fails.
+      }
+      return `https://www.google.com/maps?q=${encodeURIComponent(href)}&output=embed`;
+    };
+
+    const openModal = (embedUrl, label, activeIndex) => {
+      if (modalTitle) modalTitle.textContent = label || "Location";
+      if (modalFrame) modalFrame.src = embedUrl;
+      modal.classList.add("active");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+      if (modalSelect && typeof activeIndex === "number") {
+        modalSelect.value = String(activeIndex);
+      }
+    };
+
+    const closeModal = () => {
+      modal.classList.remove("active");
+      modal.setAttribute("aria-hidden", "true");
+      if (modalFrame) modalFrame.src = "";
+      document.body.classList.remove("modal-open");
+    };
+
+    const locationItems = Array.from(locationLinks).map((link) => ({
+      href: link.href,
+      label: link.textContent.trim(),
+    }));
+
+    locationLinks.forEach((link, index) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const embedUrl = buildEmbedUrl(link.href);
+        const label = link.textContent.trim();
+        openModal(embedUrl, label, index);
+      });
+    });
+
+    if (modalSelect) {
+      modalSelect.innerHTML = locationItems
+        .map((item, index) => `<option value="${index}">${item.label}</option>`)
+        .join("");
+    }
+
+    if (modalJump && modalSelect) {
+      modalJump.addEventListener("click", () => {
+        const index = Number(modalSelect.value);
+        if (Number.isNaN(index) || !locationItems[index]) return;
+        const target = locationItems[index];
+        const embedUrl = buildEmbedUrl(target.href);
+        openModal(embedUrl, target.label, index);
+      });
+    }
+
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) closeModal();
+    });
+    if (modalClose) modalClose.addEventListener("click", closeModal);
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && modal.classList.contains("active")) {
+        closeModal();
+      }
     });
   }
 });
