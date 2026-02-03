@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="report.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="reportForm" action="#" method="POST" enctype="multipart/form-data">
+            <h1 class="full-width">Contact norwaafricaltd</h1>
+            
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="firstName">First Name <span class="mandatory">*</span></label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName">
+                </div>
+                <div class="form-group">
+                    <label for="organizationName">Organization Name</label>
+                    <input type="text" id="organizationName" name="organizationName">
+                </div>
+                <div class="form-group">
+                    <label for="mobileNo">Mobile No. <span class="mandatory">*</span></label>
+                    <input type="tel" id="mobileNo" name="mobileNo" required>
+                </div>
+                <div class="form-group full-width">
+                    <label for="email">Email <span class="mandatory">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group full-width">
+                    <label for="location">Location <span class="mandatory">*</span></label>
+                    <input type="text" id="location" name="location" required> 
+                </div>
+               
+                <div class="form-group full-width">
+                    <label for="description">Send a message</label>
+                    <textarea id="description" name="description" rows="5"></textarea>
+                </div>
+                <div class="form-group full-width">
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="report.js"></script>
+</body>
+</html>

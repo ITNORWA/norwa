@@ -6,6 +6,11 @@
   <title>Blog | Norwa Africa</title>
   <meta name="description" content="Norwa Africa blog post.">
   <meta property="og:image" content="">
+  <link href="assets/img/favicon.webp" rel="icon">
+  <link href="assets/img/favicon.webp" rel="apple-touch-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -61,27 +66,31 @@
     </div>
   </header>
 
+  <main class="blog-shell blog-detail-shell">
+    <article class="blog-detail blog-detail--full">
+      <header class="blog-detail-header">
+        <p class="blog-detail-kicker">Norwa Blog</p>
+        <h1 id="blog-title"></h1>
+        <div class="blog-detail-meta">
+          <span id="blog-meta" class="blog-detail-chip"></span>
+          <span class="blog-detail-chip">Water Systems</span>
+          <span class="blog-detail-chip">Field Notes</span>
+        </div>
+      </header>
 
-  <div class="page-title dark-background" style="background-image: url(assets/img/education/wholehousefiltration.png);">
-    <div class="container position-relative">
-      <h1>Norwa Blog</h1>
-      <p>Insights, projects, and updates from our team.</p>
-      <nav class="breadcrumbs">
-        <ol>
-          <li><a href="index.html">Home</a></li>
-          <li class="current">Blog</li>
-        </ol>
-      </nav>
-    </div>
-  </div>
+      <section class="blog-media-section blog-media-section--solo">
+        <div id="blog-media" class="blog-media"></div>
+      </section>
 
-
-  <main class="blog-shell">
-    <article class="blog-detail">
-      <h1 id="blog-title"></h1>
-      <div id="blog-meta" class="blog-meta"></div>
-      <img id="blog-cover" class="blog-cover" alt="" />
       <div id="blog-content" class="blog-content"></div>
+
+      <section class="blog-related-videos">
+        <div class="blog-related-header">
+          <h3>More videos you might like</h3>
+          <p>Short site walk‑throughs, installs, and before‑after breakdowns.</p>
+        </div>
+        <div id="blog-video-suggestions" class="blog-video-grid blog-video-grid--compact"></div>
+      </section>
     </article>
   </main>
 
