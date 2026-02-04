@@ -162,6 +162,16 @@
     <div id="blog-pagination" class="blog-pagination"></div>
   </main>
 
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var slug = params.get("slug");
+      if (slug) {
+        window.location.replace("/blog-details.html?slug=" + encodeURIComponent(slug));
+      }
+    })();
+  </script>
+
   <footer id="footer" class="footer position-relative dark-background">
     <div class="container footer-top">
       <div class="row gy-4">
