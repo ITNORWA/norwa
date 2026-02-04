@@ -33,18 +33,13 @@
   };
 
   const slug = getSlug();
-  if (!slug) {
-    const isLocal =
-      window.location.hostname === "localhost" ||
-      window.location.hostname === "127.0.0.1";
-    const fallback = isLocal ? "blog.html" : "/blog";
-    window.location.href = fallback;
-    return;
-  }
-
   const baseFilter = `_type == "post" && defined(slug.current) && !(_id in path("drafts.**"))`;
+  const postSelector = slug
+    ? `${baseFilter} && slug.current == "${slug}"`
+    : `${baseFilter} | order(publishedAt desc) [0]`;
+
   const query = `{
-    "post": *[${baseFilter} && slug.current == "${slug}"][0]{
+    "post": *[${postSelector}][0]{
       title,
       publishedAt,
       excerpt,
