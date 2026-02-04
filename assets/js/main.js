@@ -182,6 +182,16 @@
  * -------------------------------------------------------------------------------------------
  */
 document.addEventListener("DOMContentLoaded", () => {
+  // Blog slug redirect (Option A): ensure /blog?slug=... opens details page
+  if (window.location.pathname.endsWith("/blog")) {
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get("slug");
+    if (slug) {
+      window.location.replace(`/blog-details.html?slug=${encodeURIComponent(slug)}`);
+      return;
+    }
+  }
+
   // --- Water Analysis Form Validation ---
   const reportForm = document.getElementById("reportForm");
   if (reportForm) {
