@@ -11,6 +11,7 @@
   const videoStripEl = document.querySelector(".blog-video-strip");
   const pagerEl = document.getElementById("blog-pagination");
   const perPage = 6;
+  const baseUrl = window.location.origin;
 
   const getPage = () => {
     const params = new URLSearchParams(window.location.search);
@@ -82,7 +83,7 @@
         if (videoStripEl) videoStripEl.style.display = "";
         videoGridEl.innerHTML = "";
         featuredVideos.forEach((post) => {
-          const href = `/blog-details.html?slug=${encodeURIComponent(post.slug)}`;
+          const href = `${baseUrl}/blog-details.html?slug=${encodeURIComponent(post.slug)}`;
           const img = post.coverImage || fallbackImage;
           const dateText = formatDate(post.publishedAt);
           const readMinutes = calcReadMinutes(post.body);
@@ -112,7 +113,7 @@
     }
 
     listPosts.forEach((post, index) => {
-      const href = `/blog-details.html?slug=${encodeURIComponent(post.slug)}`;
+      const href = `${baseUrl}/blog-details.html?slug=${encodeURIComponent(post.slug)}`;
       const img = post.coverImage || fallbackImage;
       const dateText = formatDate(post.publishedAt);
       const readMinutes = calcReadMinutes(post.body);
@@ -224,7 +225,7 @@
     const slug = target.getAttribute("data-slug");
     if (!slug) return;
     event.preventDefault();
-    window.location.href = `/blog-details.html?slug=${encodeURIComponent(slug)}`;
+    window.location.href = `${baseUrl}/blog-details.html?slug=${encodeURIComponent(slug)}`;
   };
 
   if (listEl) listEl.addEventListener("click", forceDetailNavigation);
