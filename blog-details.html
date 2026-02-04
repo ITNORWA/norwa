@@ -6,6 +6,13 @@
   <title>Blog | Norwa Africa</title>
   <meta name="description" content="Norwa Africa blog post.">
   <meta property="og:image" content="">
+  <script>
+    (function () {
+      if (window.location.pathname.endsWith("/blog-details")) {
+        window.location.replace("/blog-details.html" + window.location.search);
+      }
+    })();
+  </script>
   <link href="assets/img/favicon.webp" rel="icon">
   <link href="assets/img/favicon.webp" rel="apple-touch-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
