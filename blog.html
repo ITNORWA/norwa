@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Blog | Norwa Africa</title>
   <meta name="description" content="Norwa Africa blog.">
+  <script>
+    (function () {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var slug = params.get("slug");
+        if (slug) {
+          window.location.replace("/blog-details.html?slug=" + encodeURIComponent(slug));
+        }
+      } catch (e) {}
+    })();
+  </script>
   <link href="assets/img/favicon.webp" rel="icon">
   <link href="assets/img/favicon.webp" rel="apple-touch-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -312,7 +323,7 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/js/main.js"></script>
 
-  <script src="/assets/js/sanity-config.js?v=20260206"></script>
-  <script src="/assets/js/blog.js?v=20260206"></script>
+  <script src="/assets/js/sanity-config.js?v=20260207"></script>
+  <script src="/assets/js/blog.js?v=20260207"></script>
 </body>
 </html>
