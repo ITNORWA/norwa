@@ -185,7 +185,7 @@
           const fallbackImage = "assets/img/education/wholehousefiltration.png";
           suggestionsEl.innerHTML = "";
           videos.forEach((video) => {
-            const href = `blog-details.html?slug=${video.slug}`;
+            const href = `/blog-details.html?slug=${video.slug}`;
             const img = video.coverImage || fallbackImage;
             const date = video.publishedAt
               ? new Date(video.publishedAt).toLocaleDateString(undefined, {
