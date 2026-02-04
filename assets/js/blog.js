@@ -82,21 +82,21 @@
         if (videoStripEl) videoStripEl.style.display = "";
         videoGridEl.innerHTML = "";
         featuredVideos.forEach((post) => {
-          const href = `/blog-details.html?slug=${post.slug}`;
+          const href = `/blog-details.html?slug=${encodeURIComponent(post.slug)}`;
           const img = post.coverImage || fallbackImage;
           const dateText = formatDate(post.publishedAt);
           const readMinutes = calcReadMinutes(post.body);
           const card = document.createElement("article");
           card.className = "blog-video-card";
           card.innerHTML = `
-            <a class="blog-video-thumb" href="${href}">
+            <a class="blog-video-thumb" href="${href}" data-slug="${post.slug}">
               <img src="${img}" alt="${post.title}" loading="lazy">
             </a>
             <div class="blog-video-body">
               <p class="blog-video-meta">${dateText} | ${readMinutes} min</p>
               <h4>${post.title}</h4>
               <p>${post.excerpt || "Watch the full breakdown inside."}</p>
-              <a href="${href}" class="blog-row-cta">Watch now <i class="bi bi-play-circle"></i></a>
+              <a href="${href}" class="blog-row-cta" data-slug="${post.slug}">Watch now <i class="bi bi-play-circle"></i></a>
             </div>
           `;
           videoGridEl.appendChild(card);
@@ -112,7 +112,7 @@
     }
 
     listPosts.forEach((post, index) => {
-      const href = `/blog-details.html?slug=${post.slug}`;
+      const href = `/blog-details.html?slug=${encodeURIComponent(post.slug)}`;
       const img = post.coverImage || fallbackImage;
       const dateText = formatDate(post.publishedAt);
       const readMinutes = calcReadMinutes(post.body);
@@ -127,7 +127,7 @@
       card.setAttribute("data-aos-delay", index * 60);
       card.innerHTML = `
         <div class="blog-row">
-          <a class="blog-hex" href="${href}" aria-label="${post.title}">
+          <a class="blog-hex" href="${href}" aria-label="${post.title}" data-slug="${post.slug}">
             <img src="${img}" alt="${post.title}" loading="lazy">
           </a>
           <div class="blog-row-body">
@@ -136,9 +136,9 @@
               <span class="blog-row-tag">Focus: ${focus}</span>
               <span class="blog-row-read"><i class="bi bi-clock"></i> ${readMinutes} min read</span>
             </div>
-            <h3><a href="${href}">${post.title}</a></h3>
+            <h3><a href="${href}" data-slug="${post.slug}">${post.title}</a></h3>
             <p>${snippet}</p>
-            <a class="blog-row-cta" href="${href}">
+            <a class="blog-row-cta" href="${href}" data-slug="${post.slug}">
               Read More <i class="bi bi-arrow-right"></i>
             </a>
           </div>
@@ -217,4 +217,16 @@
   };
 
   if (listEl && pagerEl) load();
+
+  const forceDetailNavigation = (event) => {
+    const target = event.target.closest("[data-slug]");
+    if (!target) return;
+    const slug = target.getAttribute("data-slug");
+    if (!slug) return;
+    event.preventDefault();
+    window.location.href = `/blog-details.html?slug=${encodeURIComponent(slug)}`;
+  };
+
+  if (listEl) listEl.addEventListener("click", forceDetailNavigation);
+  if (videoGridEl) videoGridEl.addEventListener("click", forceDetailNavigation);
 })();
