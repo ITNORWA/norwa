@@ -182,35 +182,7 @@
  * -------------------------------------------------------------------------------------------
  */
 document.addEventListener("DOMContentLoaded", () => {
-  // Blog slug redirect (Option A): ensure /blog?slug=... opens details page
-  if (window.location.pathname.endsWith("/blog")) {
-    const params = new URLSearchParams(window.location.search);
-    const slug = params.get("slug");
-    if (slug) {
-      window.location.replace(`/blog-details.html?slug=${encodeURIComponent(slug)}`);
-      return;
-    }
-  }
-
-  // Force any /blog?slug=... link to open blog-details.html (prevents preview URL rewrites)
-  document.addEventListener(
-    "click",
-    (event) => {
-      const link = event.target.closest("a[href]");
-      if (!link) return;
-      const href = link.getAttribute("href");
-      if (!href) return;
-      if (href.includes("/blog?slug=") || href.includes("/blog/?slug=")) {
-        event.preventDefault();
-        const url = new URL(href, window.location.origin);
-        const slug = url.searchParams.get("slug");
-        if (slug) {
-          window.location.href = `/blog-details.html?slug=${encodeURIComponent(slug)}`;
-        }
-      }
-    },
-    true
-  );
+  // (Blog routing fix removed to avoid redirect loops on Cloudflare Pages preview URLs)
 
   // --- Water Analysis Form Validation ---
   const reportForm = document.getElementById("reportForm");
