@@ -14,14 +14,6 @@
 
   const getPage = () => {
     const params = new URLSearchParams(window.location.search);
-    const slug = params.get("slug");
-    if (slug) {
-      const target = `/blog-details.html?slug=${encodeURIComponent(slug)}`;
-      if (window.location.pathname !== "/blog-details.html") {
-        window.location.replace(target);
-      }
-      return 1;
-    }
     const p = parseInt(params.get("page") || "1", 10);
     return Number.isNaN(p) || p < 1 ? 1 : p;
   };
