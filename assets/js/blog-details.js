@@ -34,8 +34,24 @@
 
   const slug = getSlug();
   const baseFilter = `_type == "post" && defined(slug.current) && !(_id in path("drafts.**"))`;
+  const normalizeSlug = (value) =>
+    value
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/-+/g, "-")
+      .replace(/^-+|-+$/g, "");
+  const slugCandidates = slug
+    ? Array.from(
+        new Set([slug, decodeURIComponent(slug), normalizeSlug(slug)])
+      ).filter(Boolean)
+    : [];
+  const slugFilter =
+    slugCandidates.length > 0
+      ? slugCandidates.map((s) => `slug.current == "${s}"`).join(" || ")
+      : "";
   const postSelector = slug
-    ? `${baseFilter} && slug.current == "${slug}"`
+    ? `${baseFilter} && (${slugFilter})`
     : `${baseFilter} | order(publishedAt desc) [0]`;
 
   const query = `{
