@@ -117,11 +117,14 @@
       const img = post.coverImage || fallbackImage;
       const dateText = formatDate(post.publishedAt);
       const readMinutes = calcReadMinutes(post.body);
+      const isVideo = Boolean(post.videoUrl || post.videoFile);
       const focus = focusTags[index % focusTags.length];
       const extra = extraCopy[index % extraCopy.length];
       const snippet = post.excerpt
         ? `${post.excerpt} ${extra}`
         : `A quick preview of the post. ${extra}`;
+      const ctaText = isVideo ? "Watch now" : "Read more";
+      const ctaIcon = isVideo ? "bi-play-circle" : "bi-arrow-right";
       const card = document.createElement("article");
       card.className = "blog-row-card";
       card.setAttribute("data-aos", "fade-up");
@@ -140,7 +143,7 @@
             <h3><a href="${href}" data-slug="${post.slug}">${post.title}</a></h3>
             <p>${snippet}</p>
             <a class="blog-row-cta" href="${href}" data-slug="${post.slug}">
-              Read More <i class="bi bi-arrow-right"></i>
+              ${ctaText} <i class="bi ${ctaIcon}"></i>
             </a>
           </div>
         </div>
