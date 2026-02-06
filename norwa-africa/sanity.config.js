@@ -7,7 +7,7 @@ export default defineConfig({
   name: 'default',
   title: 'Norwa Africa',
 
-  projectId: 'cyjtm9y2',
+  projectId: 'pxbfeggb',
   dataset: 'production',
 
   plugins: [structureTool(), visionTool()],
