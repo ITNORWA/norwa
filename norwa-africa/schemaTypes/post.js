@@ -51,6 +51,13 @@ export default {
       type: "datetime",
     },
     {
+      name: "isHighlight",
+      title: "Highlight this post",
+      type: "boolean",
+      description: "Show this post in the highlights slider on the blog page.",
+      initialValue: false,
+    },
+    {
       name: "videoUrl",
       title: "Video URL",
       type: "url",
