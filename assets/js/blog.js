@@ -10,6 +10,9 @@
   const videoGridEl = document.getElementById("blog-video-grid");
   const videoStripEl = document.querySelector(".blog-video-strip");
   const pagerEl = document.getElementById("blog-pagination");
+  const highlightEl = document.getElementById("blog-highlight");
+  const highlightTrackEl = highlightEl ? highlightEl.querySelector(".blog-highlight-track") : null;
+  const highlightDotsEl = highlightEl ? highlightEl.querySelector(".blog-highlight-dots") : null;
   const perPage = 6;
   const baseUrl = window.location.origin;
 
@@ -152,6 +155,64 @@
     });
   };
 
+  const renderHighlights = (highlights, fallbackPosts) => {
+    if (!highlightEl || !highlightTrackEl || !highlightDotsEl) return;
+    const fallbackImage = "assets/img/education/wholehousefiltration.png";
+    const picks = highlights.length ? highlights : fallbackPosts.slice(0, 3);
+    if (!picks.length) {
+      highlightEl.style.display = "none";
+      return;
+    }
+
+    highlightTrackEl.innerHTML = "";
+    highlightDotsEl.innerHTML = "";
+
+    picks.forEach((post, index) => {
+      const href = `${baseUrl}/blog-details.html?slug=${encodeURIComponent(post.slug)}`;
+      const img = post.image || post.coverImage || fallbackImage;
+      const slide = document.createElement("a");
+      slide.className = "blog-highlight-slide";
+      slide.href = href;
+      slide.setAttribute("data-slug", post.slug);
+      slide.innerHTML = `
+        <img src="${img}" alt="${post.title}" loading="lazy">
+        <div class="blog-highlight-caption">${post.title}</div>
+      `;
+      highlightTrackEl.appendChild(slide);
+
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "blog-highlight-dot";
+      dot.setAttribute("aria-label", `Highlight ${index + 1}`);
+      dot.addEventListener("click", () => setHighlight(index));
+      highlightDotsEl.appendChild(dot);
+    });
+
+    let current = 0;
+    const dots = Array.from(highlightDotsEl.querySelectorAll(".blog-highlight-dot"));
+    const total = picks.length;
+    let timer;
+
+    const setHighlight = (index) => {
+      current = (index + total) % total;
+      highlightTrackEl.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((dot, i) => dot.classList.toggle("is-active", i === current));
+    };
+
+    const start = () => {
+      if (total <= 1) return;
+      timer = setInterval(() => setHighlight(current + 1), 7000);
+    };
+    const stop = () => {
+      if (timer) clearInterval(timer);
+    };
+
+    highlightEl.addEventListener("mouseenter", stop);
+    highlightEl.addEventListener("mouseleave", start);
+    setHighlight(0);
+    start();
+  };
+
   const renderPagination = (page, total) => {
     const totalPages = Math.max(1, Math.ceil(total / perPage));
     pagerEl.innerHTML = "";
@@ -191,6 +252,12 @@
     const baseFilter = `_type == "post" && defined(slug.current) && !(_id in path("drafts.**"))`;
     const query = `{
       "total": count(*[${baseFilter}]),
+      "highlights": *[${baseFilter} && isHighlight == true] | order(publishedAt desc) [0..2] {
+        title,
+        "slug": slug.current,
+        "image": mainImage.asset->url,
+        publishedAt
+      },
       "posts": *[${baseFilter}] | order(publishedAt desc) [${from}..${to}] {
         title,
         "slug": slug.current,
@@ -212,7 +279,9 @@
       clearTimeout(timer);
       const json = await res.json();
       if (!json.result) throw new Error("No results");
-      renderPosts(json.result.posts || []);
+      const posts = json.result.posts || [];
+      renderHighlights(json.result.highlights || [], posts);
+      renderPosts(posts);
       renderPagination(page, json.result.total || 0);
     } catch (err) {
       console.error(err);

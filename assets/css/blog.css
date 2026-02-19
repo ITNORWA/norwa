@@ -307,36 +307,99 @@
   gap: 16px;
 }
 
-.blog-intro-visual {
-  background: linear-gradient(135deg, #f0f4f2 0%, #e7eeeb 100%);
-  border-radius: 18px;
-  border: 1px dashed rgba(15, 26, 35, 0.2);
+.blog-highlight {
+  position: relative;
   width: 100%;
-  min-height: 220px;
-  max-width: 100%;
-  display: grid;
-  place-items: center;
-  color: var(--blog-muted);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  font-size: 0.7rem;
-  margin-bottom: 16px;
+  height: 340px;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  border: 1px solid rgba(15, 26, 35, 0.12);
+  background: #f2f6f4;
   overflow: hidden;
+  margin-bottom: 16px;
 }
 
-.blog-intro-visual span {
-  padding: 8px 12px;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 999px;
-  border: 1px solid rgba(15, 26, 35, 0.1);
+.blog-highlight-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.7s ease;
+  will-change: transform;
 }
 
-.blog-intro-visual img {
+.blog-highlight-slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.blog-highlight-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  animation: blogHighlightFloat 4.8s ease-in-out infinite;
+}
+
+.blog-highlight-slide:nth-child(2) img {
+  animation-delay: 0.6s;
+}
+
+.blog-highlight-slide:nth-child(3) img {
+  animation-delay: 1.2s;
+}
+
+@keyframes blogHighlightFloat {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  30% {
+    transform: translateY(-4px) scale(1.01);
+  }
+  60% {
+    transform: translateY(3px) scale(1.005);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+.blog-highlight-caption {
+  position: absolute;
+  inset: auto 16px 16px 16px;
+  background: rgba(10, 15, 18, 0.55);
+  color: #f5f9f7;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+.blog-highlight-dots {
+  position: absolute;
+  inset: auto 0 12px 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+.blog-highlight-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.blog-highlight-dot.is-active {
+  background: #10b981;
+}
+
+@media (max-width: 768px) {
+  .blog-highlight {
+    height: 220px;
+    border-radius: 16px;
+  }
 }
 
 .blog-note {
